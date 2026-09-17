@@ -1,0 +1,29 @@
+# Build outputs
+/build
+/app/build
+/app/release
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# Local config (SDK path etc.)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.kotlin/
+
+# Signing — NEVER commit these
+keystore.properties
+*.jks
+*.keystore
+
+# Store listing drafts / internal notes (optional to keep private)
+paydos-play-store-materials.md

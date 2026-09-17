@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+// Release imzalama bilgileri (keystore yolu + şifreler) proje köküne
+// eklenecek "keystore.properties" dosyasından okunuyor. Bu dosya BİLEREK
+// buraya (koda) yazılmıyor - şifreler ve keystore sadece bu bilgisayarda
+// kalmalı. Dosya henüz yoksa (ör. ilk kurulumda) release build'i imzasız
+// derlenir, hata vermez; keystore.properties.example'daki adımları
+// izleyip dosyayı oluşturunca release imzalaması otomatik devreye girer.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+def hasSigningConfig = keystorePropertiesFile.exists()
+if (hasSigningConfig) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace 'com.zamankilidi.app'
+    // Play Store 2026'dan itibaren yeni uygulamalarda en az API 36 (Android 16)
+    // hedeflemeyi zorunlu tutuyor. AGP 8.5.2 bunu derler ama sadece "test
+    // edilmedi" uyarısı verir - release imzalama aşamasında AGP/Gradle'ı da
+    // (8.10.0+ / Gradle 8.11.1+) yükseltirsek uyarı da gider.
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.zamankilidi.app"
+        minSdk 26
+        targetSdk 36
+        versionCode 7
+        versionName "1.6"
+    }
+
+    signingConfigs {
+        if (hasSigningConfig) {
+            release {
+                storeFile rootProject.file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (hasSigningConfig) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.activity:activity-ktx:1.9.2'
+    // AdMob (geçiş reklamı) - ebeveyn kilidi başlattığında gösterilir, çocuğun
+    // gördüğü kilit ekranında (BlockActivity) reklam GÖSTERİLMEZ.
+    implementation 'com.google.android.gms:play-services-ads:25.0.0'
+}

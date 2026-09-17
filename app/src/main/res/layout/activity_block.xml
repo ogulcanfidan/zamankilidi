@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="⏳"
+        android:textSize="56sp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/time_up_title"
+        android:textColor="@color/text_primary"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/time_up_message"
+        android:textColor="@color/text_dim"
+        android:textSize="15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllowedApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvParentToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_chip_unchecked"
+        android:gravity="center"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="10dp"
+        android:text="@string/parent_toggle"
+        android:textColor="@color/text_dim"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/pinRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etPin"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:hint="@string/pin_hint_short"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim" />
+
+        <Button
+            android:id="@+id/btnUnlock"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/accent"
+            android:text="@string/btn_unlock"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPinError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/pin_error"
+        android:textColor="@color/danger"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvForgotPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="@string/forgot_pin_link"
+        android:textColor="@color/text_dim"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <!-- Banner reklam SADECE pinRow ile aynı anda görünür - yani sadece PIN
+         alanı açıkken (blocked_app modunda "Ebeveyn misiniz?" onaylandıktan
+         sonra, time_up modunda ise zaten baştan) gösterilir. Görünürlüğü
+         kod tarafında pinRow ile birlikte, elle senkron tutuluyor. -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2569162850712494/3062465925"
+        android:visibility="gone" />
+
+</LinearLayout>

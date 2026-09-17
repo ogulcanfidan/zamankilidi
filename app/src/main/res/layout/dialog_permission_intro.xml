@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Uygulama her açıldığında (izinler tamamlanana kadar) izin akışı
+    başlamadan ÖNCE gösterilen, kapatılamayan (10 saniye) kısa bilgilendirme
+    penceresi. Sadece "bu izinler neden gerekli" diyor - kendisi bir izin
+    istemiyor, asıl izin akışı "İzin ver" butonuyla ayrıca başlıyor.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔒"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/permission_intro_title"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/permission_intro_body"
+        android:textColor="@color/text_dim"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp" />
+
+    <Button
+        android:id="@+id/btnIntroContinue"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/accent"
+        android:enabled="false"
+        android:text="@string/permission_intro_button_ready"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <string name="accessibility_service_description">Paydos\'un, oturum aktifken hangi uygulamanın ekranda olduğunu görüp izin verilmeyen bir uygulama açıldığında geri yönlendirebilmesi için gerekli.</string>
+
+    <string name="subtitle_main">Süreyi seç, izin verilecek uygulamaları işaretle, telefonu çocuğuna ver.</string>
+
+    <string name="permissions_card_title">🔐  Önce birkaç izin gerekiyor</string>
+    <string name="permissions_card_body">Aşağıdaki butona bir kez basman yeterli - gerisini sırayla ben açarım, sen sadece her ekranda \"izin ver\"e/\"aç\"a dokun.</string>
+    <string name="btn_grant_permissions">İzinleri ayarla</string>
+
+    <string name="pin_title_new">🔑  Ebeveyn PIN\'i belirle</string>
+    <string name="pin_title_saved">🔑  Ebeveyn PIN\'i (kayıtlı)</string>
+    <string name="pin_hint_new">4 haneli PIN</string>
+    <string name="pin_hint_change">Değiştirmek istersen yeni PIN yaz</string>
+    <string name="pin_card_body">Kilidi süre dolmadan kapatmak için bu PIN gerekecek. Çocuğun bilmediği bir şey seç.</string>
+    <string name="recovery_answer_label">Kurtarma cevabı (zorunlu)</string>
+    <string name="recovery_answer_hint">PIN\'ini unutursan kilidi bununla açabilirsin. Senin kolay hatırlayacağın ama çocuğunun bilmediği/tahmin edemeyeceği bir şey seç — doğum yılı ya da isim gibi bariz şeyler olmasın. Örneğin: ilk evcil hayvanının adı, en sevdiğin öğretmenin soyadı ya da liseni bitirdiğin şehir.</string>
+    <string name="recovery_answer_field_hint">Kurtarma cevabın</string>
+    <string name="recovery_answer_label_saved">Kurtarma cevabı (kayıtlı)</string>
+    <string name="recovery_answer_field_hint_saved">Değiştirmek istersen yeni bir tane yaz (opsiyonel)</string>
+    <string name="forgot_pin_link">PIN\'imi unuttum</string>
+    <string name="recovery_dialog_title">Kurtarma cevabını gir</string>
+    <string name="recovery_dialog_positive">Doğrula</string>
+    <string name="recovery_dialog_negative">Vazgeç</string>
+    <string name="recovery_wrong_answer">Bu cevap doğru değil, tekrar dene</string>
+    <string name="recovery_not_set">Bu kilit için bir kurtarma cevabı belirlenmemiş</string>
+    <string name="toast_recovery_answer_required">PIN\'i unutursan açabilmek için bir kurtarma cevabı da belirlemen gerekiyor</string>
+    <string name="recovery_restart_hint">İkisini de (PIN\'i ve kurtarma cevabını) unutursan: telefonu kapatıp yeniden açman kilidi kaldırır.</string>
+    <string name="recovery_question_label">Kurtarma sorusu</string>
+    <string-array name="recovery_questions">
+        <item>İlk evcil hayvanının adı neydi?</item>
+        <item>En sevdiğin öğretmeninin soyadı neydi?</item>
+        <item>Liseyi hangi şehirde bitirdin?</item>
+        <item>İlk aracının markası neydi?</item>
+        <item>Çocukluk en yakın arkadaşının adı neydi?</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  Süre</string>
+    <string name="duration_15">15 dk</string>
+    <string name="duration_30">30 dk</string>
+    <string name="duration_60">1 saat</string>
+    <string name="duration_custom_label">Diğer:</string>
+    <string name="duration_custom_hint">dk</string>
+
+    <string name="apps_card_title">📱  İzin verilen uygulamalar</string>
+    <string name="apps_card_body">Süre boyunca çocuğun açabileceği uygulamaları işaretle.</string>
+    <string name="sort_recent">Son kullanılan</string>
+    <string name="sort_most_used">En çok\nkullanılan</string>
+    <string name="sort_alpha">Alfabetik</string>
+
+    <string name="btn_start_lock">Kilidi başlat</string>
+    <string name="footer_privacy_note">🔒  Ayarların ve PIN\'in sadece bu telefonda saklanır.</string>
+
+    <string name="time_up_title">Süre doldu</string>
+    <string name="time_up_message">Süren doldu, telefonu bir büyüğüne verebilirsin.</string>
+    <string name="blocked_app_title">Bu uygulama şu an listede değil</string>
+    <string name="time_up_recent">Süre az önce doldu.</string>
+    <string name="remaining_time_format">Kalan süre: %1$02d:%2$02d — izinli uygulamalardan birini seçebilirsin.</string>
+    <string name="parent_toggle">Ebeveyn misin? Kilidi kapatmak için dokun</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Kilidi kaldır</string>
+    <string name="pin_error">Yanlış PIN</string>
+
+    <string name="toast_find_open_app">Açılan ekranda \"Paydos\"u bul ve aç</string>
+    <string name="device_admin_explanation">Paydos\'un, kilit süresince kolayca silinememesi için gerekiyor.</string>
+    <string name="toast_usage_access_needed">Bu sıralama için Android\'in \"Kullanım Erişimi\" iznini açman gerekiyor. Açılan ekranda listeden \"Paydos\"u bulup izin ver.</string>
+    <string name="usage_access_dialog_title">Bir izin daha, ama isteğe bağlı</string>
+    <string name="usage_access_dialog_positive">İzin ver</string>
+    <string name="usage_access_dialog_negative">Şimdi değil</string>
+    <string name="permission_intro_title">Paydos\'un çalışabilmesi için birkaç izne ihtiyacı var</string>
+    <string name="permission_intro_body">Bu izinler olmadan kilit özelliği çalışmaz:\n\n• Erişilebilirlik — hangi uygulamanın açık olduğunu görmek için\n• Cihaz Yöneticisi — kilit aktifken uygulamanın silinmesini zorlaştırmak için\n• Bildirim — kalan süreyi haber vermek için\n\nHiçbiri ekran içeriğini okumaz, veri toplamaz.</string>
+    <string name="permission_intro_button_wait">Anladım (%1$d)</string>
+    <string name="permission_intro_button_ready">Anladım, devam et</string>
+    <string name="toast_open_permissions_first">Önce yukarıdaki izinleri aç</string>
+    <string name="toast_pick_valid_duration">Geçerli bir süre seç</string>
+    <string name="toast_pin_min_length_new">En az 4 haneli bir PIN belirle</string>
+    <string name="toast_pin_min_length_change">Yeni PIN en az 4 haneli olmalı</string>
+    <string name="toast_lock_started_format">Kilit başladı: %1$d dakika</string>
+
+    <string name="notification_title_active">Paydos aktif</string>
+    <string name="notification_remaining_format">Kalan süre: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos sayaç</string>
+
+    <!-- Erişilebilirlik izni açıklama ekranı -->
+    <string name="accessibility_disclosure_title">Erişilebilirlik izni hakkında</string>
+    <string name="accessibility_disclosure_body">Paydos\'un kilit süresi boyunca çalışabilmesi için Android\'in Erişilebilirlik iznine ihtiyacı var. Devam etmeden önce bunun tam olarak ne işe yaradığını açıklayalım:</string>
+    <string name="accessibility_disclosure_point_what">🔍 Ne yapıyor: Kilit aktifken ekranda hangi uygulamanın açık olduğunu kontrol eder.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Neden gerekli: İzin verilmeyen bir uygulama açıldığında seni otomatik olarak kilit ekranına geri yönlendirir.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Ne yapmıyor: Ekrandaki yazıları, şifreleri ya da başka hiçbir içeriği okumaz; hiçbir veri telefonundan dışarı gönderilmez.</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Bir sonraki ekranda Android kırmızı bir \"Tehlike\" uyarısı gösterebilir. Bu, bu izni isteyen HER uygulamada çıkan standart bir sistem mesajıdır — Paydos\'a özel bir şey değildir, endişelenme.</string>
+    <string name="btn_disclosure_continue">Anladım, devam et</string>
+    <string name="btn_disclosure_cancel">Şimdi değil</string>
+</resources>

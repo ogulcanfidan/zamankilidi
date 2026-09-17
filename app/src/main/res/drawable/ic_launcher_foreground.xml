@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Asma kilidin kolu (shackle) -->
+    <path
+        android:pathData="M43,48 L43,37 A11,11 0 0 1 65,37 L65,48"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="7"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Asma kilidin gövdesi -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,46 L70,46 A8,8 0 0 1 78,54 L78,74 A8,8 0 0 1 70,82 L38,82 A8,8 0 0 1 30,74 L30,54 A8,8 0 0 1 38,46 Z" />
+
+    <!-- Gövdenin içindeki saat kadranı -->
+    <path
+        android:fillColor="#6C8CFF"
+        android:pathData="M54,64m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+
+    <!-- Akrep -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,64 L54,58" />
+
+    <!-- Yelkovan -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,64 L60,64" />
+
+    <!-- Merkez nokta -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,64m-1.4,0a1.4,1.4 0,1 1,2.8 0a1.4,1.4 0,1 1,-2.8 0" />
+
+</vector>

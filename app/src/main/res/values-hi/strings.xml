@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">यह Paydos को सत्र सक्रिय रहते समय यह देखने देता है कि स्क्रीन पर कौन-सा ऐप खुला है, और अनुमति न प्राप्त ऐप खोलने पर वापस भेजता है। यह स्क्रीन की सामग्री नहीं पढ़ता।</string>
+    <string name="subtitle_main">समय चुनें, अनुमति वाले ऐप चुनें, और फ़ोन अपने बच्चे को दें।</string>
+    <string name="permissions_card_title">🔐  पहले कुछ अनुमतियाँ चाहिए</string>
+    <string name="permissions_card_body">नीचे दिए बटन पर एक बार टैप करना काफ़ी है - बाकी सब मैं क्रम से खोलूँगा, आपको बस हर स्क्रीन पर \"अनुमति दें\"/\"चालू करें\" पर टैप करना है।</string>
+    <string name="btn_grant_permissions">अनुमतियाँ सेट करें</string>
+    <string name="pin_title_new">🔑  अभिभावक PIN सेट करें</string>
+    <string name="pin_title_saved">🔑  अभिभावक PIN (सहेजा गया)</string>
+    <string name="pin_hint_new">4 अंकों का PIN</string>
+    <string name="pin_hint_change">बदलने के लिए नया PIN लिखें</string>
+    <string name="pin_card_body">समय खत्म होने से पहले लॉक हटाने के लिए यह PIN चाहिए होगा। कुछ ऐसा चुनें जो बच्चे को न पता हो।</string>
+    <string name="duration_card_title">⏱️  समय</string>
+    <string name="duration_15">15 मिनट</string>
+    <string name="duration_30">30 मिनट</string>
+    <string name="duration_60">1 घंटा</string>
+    <string name="duration_custom_label">अन्य:</string>
+    <string name="duration_custom_hint">मिनट</string>
+    <string name="apps_card_title">📱  अनुमति वाले ऐप</string>
+    <string name="apps_card_body">इस समय के दौरान बच्चा जो ऐप खोल सकता है उन्हें चुनें।</string>
+    <string name="sort_recent">हाल में उपयोग किए</string>
+    <string name="sort_most_used">सबसे ज़्यादा\nउपयोग किए</string>
+    <string name="sort_alpha">A-Z</string>
+    <string name="btn_start_lock">लॉक शुरू करें</string>
+    <string name="footer_privacy_note">🔒  आपकी सेटिंग्स और PIN सिर्फ़ इसी फ़ोन में सहेजे जाते हैं।</string>
+    <string name="time_up_title">समय खत्म</string>
+    <string name="time_up_message">आपका समय खत्म हो गया, अब फ़ोन किसी बड़े को दे सकते हैं।</string>
+    <string name="blocked_app_title">यह ऐप अभी सूची में नहीं है</string>
+    <string name="time_up_recent">समय अभी खत्म हुआ है।</string>
+    <string name="remaining_time_format">बचा हुआ समय: %1$02d:%2$02d — अनुमति वाले किसी ऐप को चुनें।</string>
+    <string name="parent_toggle">क्या आप बड़े हैं? लॉक हटाने के लिए यहाँ टैप करें</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">लॉक हटाएँ</string>
+    <string name="pin_error">गलत PIN</string>
+    <string name="toast_find_open_app">खुली हुई स्क्रीन में \"Paydos\" ढूँढें और खोलें</string>
+    <string name="device_admin_explanation">यह ज़रूरी है ताकि लॉक सक्रिय रहते समय Paydos आसानी से हटाया न जा सके।</string>
+    <string name="toast_usage_access_needed">इस क्रम के लिए Android की \"उपयोग एक्सेस\" अनुमति चाहिए। खुली स्क्रीन में सूची से \"Paydos\" ढूँढकर अनुमति दें।</string>
+    <string name="toast_open_permissions_first">पहले ऊपर दी अनुमतियाँ चालू करें</string>
+    <string name="toast_pick_valid_duration">एक सही समय चुनें</string>
+    <string name="toast_pin_min_length_new">कम से कम 4 अंकों का PIN सेट करें</string>
+    <string name="toast_pin_min_length_change">नया PIN कम से कम 4 अंकों का होना चाहिए</string>
+    <string name="toast_lock_started_format">लॉक शुरू हुआ: %1$d मिनट</string>
+    <string name="notification_title_active">Paydos सक्रिय है</string>
+    <string name="notification_remaining_format">बचा हुआ समय: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos टाइमर</string>
+    <!-- एक्सेसिबिलिटी अनुमति के बारे में जानकारी वाली स्क्रीन -->
+    <string name="accessibility_disclosure_title">एक्सेसिबिलिटी अनुमति के बारे में</string>
+    <string name="accessibility_disclosure_body">लॉक सक्रिय रहते समय काम करने के लिए Paydos को Android की एक्सेसिबिलिटी अनुमति चाहिए। आगे बढ़ने से पहले, यह बिल्कुल इसलिए ज़रूरी है:</string>
+    <string name="accessibility_disclosure_point_what">🔍 यह क्या करता है: जब लॉक सक्रिय हो, यह जाँचता है कि स्क्रीन पर कौन-सा ऐप खुला है।</string>
+    <string name="accessibility_disclosure_point_why">↩️ यह क्यों ज़रूरी है: अगर कोई अनुमति न प्राप्त ऐप खोला जाए, तो यह अपने आप तुम्हें लॉक स्क्रीन पर वापस भेज देता है।</string>
+    <string name="accessibility_disclosure_point_data">🔒 यह क्या नहीं करता: यह स्क्रीन पर लिखा टेक्स्ट, पासवर्ड या कोई भी अन्य सामग्री नहीं पढ़ता, और कोई भी डेटा कभी तुम्हारे फ़ोन से बाहर नहीं जाता।</string>
+    <string name="btn_disclosure_continue">समझ गया, आगे बढ़ें</string>
+    <string name="btn_disclosure_cancel">अभी नहीं</string>
+
+    <!-- रिकवरी / अनुमति-परिचय पॉप-अप (बाद में जोड़ा गया) -->
+    <string name="forgot_pin_link">PIN भूल गए?</string>
+    <string name="recovery_dialog_title">अपना रिकवरी उत्तर दर्ज करें</string>
+    <string name="recovery_dialog_positive">सत्यापित करें</string>
+    <string name="recovery_dialog_negative">रद्द करें</string>
+    <string name="recovery_wrong_answer">यह उत्तर सही नहीं है, फिर कोशिश करें</string>
+    <string name="recovery_not_set">इस लॉक के लिए कोई रिकवरी उत्तर सेट नहीं किया गया</string>
+    <string name="toast_recovery_answer_required">एक रिकवरी उत्तर भी सेट करें, ताकि PIN भूलने पर भी लॉक खोल सकें</string>
+    <string name="recovery_restart_hint">PIN और रिकवरी उत्तर दोनों भूल गए? फ़ोन को बंद करके फिर से चालू करने से लॉक हट जाता है।</string>
+    <string name="recovery_answer_label">रिकवरी उत्तर (आवश्यक)</string>
+    <string name="recovery_answer_hint">अगर आप अपना PIN भूल जाते हैं, तो इससे लॉक खुल जाएगा। कुछ ऐसा चुनें जो आपके लिए याद रखना आसान हो लेकिन आपका बच्चा न जानता हो और न अनुमान लगा सके — जन्म का साल या नाम नहीं। उदाहरण के लिए: आपके पहले पालतू जानवर का नाम, आपके पसंदीदा शिक्षक का उपनाम, या जिस शहर में आपने स्कूल पूरा किया।</string>
+    <string name="recovery_answer_field_hint">आपका रिकवरी उत्तर</string>
+    <string name="recovery_answer_label_saved">रिकवरी उत्तर (सहेजा गया)</string>
+    <string name="recovery_answer_field_hint_saved">बदलने के लिए नया उत्तर लिखें (वैकल्पिक)</string>
+    <string name="recovery_question_label">रिकवरी सवाल</string>
+    <string-array name="recovery_questions">
+        <item>आपके पहले पालतू जानवर का नाम क्या था?</item>
+        <item>आपके पसंदीदा शिक्षक का उपनाम क्या है?</item>
+        <item>आपने किस शहर में स्कूल पूरा किया?</item>
+        <item>आपकी पहली कार किस कंपनी की थी?</item>
+        <item>बचपन के सबसे अच्छे दोस्त का नाम क्या था?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">एक और वैकल्पिक अनुमति</string>
+    <string name="usage_access_dialog_positive">अनुमति दें</string>
+    <string name="usage_access_dialog_negative">अभी नहीं</string>
+    <string name="permission_intro_title">Paydos को काम करने के लिए कुछ अनुमतियाँ चाहिए</string>
+    <string name="permission_intro_body">इन अनुमतियों के बिना लॉक सुविधा काम नहीं करेगी:\n\n• पहुँच-योग्यता — यह देखने के लिए कि कौन सा ऐप खुला है\n• डिवाइस एडमिन — ताकि लॉक के दौरान ऐप को हटाना आसान न हो\n• सूचनाएँ — बचे हुए समय की जानकारी देने के लिए\n\nइनमें से कोई भी आपकी स्क्रीन नहीं पढ़ता या डेटा एकत्र नहीं करता।</string>
+    <string name="permission_intro_button_wait">समझ गया (%1$d)</string>
+    <string name="permission_intro_button_ready">समझ गया, जारी रखें</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ ध्यान दें: अगली स्क्रीन पर Android एक लाल \"खतरा\" चेतावनी दिखा सकता है। यह एक सामान्य सिस्टम संदेश है जो यह अनुमति माँगने वाले हर ऐप के लिए दिखाया जाता है, Paydos के लिए खास नहीं है।</string>
+</resources>

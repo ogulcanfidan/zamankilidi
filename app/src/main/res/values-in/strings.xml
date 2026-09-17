@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">Memungkinkan Paydos melihat aplikasi apa yang sedang dibuka selama sesi aktif, dan mengalihkan kembali jika aplikasi yang tidak diizinkan dibuka. Tidak membaca isi layar.</string>
+    <string name="subtitle_main">Pilih durasi, tandai aplikasi yang diizinkan, lalu berikan ponsel ke anak.</string>
+    <string name="permissions_card_title">🔐  Perlu beberapa izin dulu</string>
+    <string name="permissions_card_body">Cukup sentuh tombol di bawah sekali - sisanya akan saya buka satu per satu, kamu tinggal sentuh \"Izinkan\"/\"Aktifkan\" di tiap layar.</string>
+    <string name="btn_grant_permissions">Atur izin</string>
+    <string name="pin_title_new">🔑  Buat PIN orang tua</string>
+    <string name="pin_title_saved">🔑  PIN orang tua (tersimpan)</string>
+    <string name="pin_hint_new">PIN 4 digit</string>
+    <string name="pin_hint_change">Masukkan PIN baru untuk menggantinya</string>
+    <string name="pin_card_body">PIN ini diperlukan untuk mengakhiri kunci sebelum waktu habis. Pilih sesuatu yang tidak diketahui anak.</string>
+    <string name="duration_card_title">⏱️  Durasi</string>
+    <string name="duration_15">15 mnt</string>
+    <string name="duration_30">30 mnt</string>
+    <string name="duration_60">1 jam</string>
+    <string name="duration_custom_label">Lainnya:</string>
+    <string name="duration_custom_hint">mnt</string>
+    <string name="apps_card_title">📱  Aplikasi yang diizinkan</string>
+    <string name="apps_card_body">Tandai aplikasi yang boleh dibuka anak selama waktu ini.</string>
+    <string name="sort_recent">Baru digunakan</string>
+    <string name="sort_most_used">Paling sering\ndigunakan</string>
+    <string name="sort_alpha">A-Z</string>
+    <string name="btn_start_lock">Mulai kunci</string>
+    <string name="footer_privacy_note">🔒  Pengaturan dan PIN kamu hanya disimpan di ponsel ini.</string>
+    <string name="time_up_title">Waktu habis</string>
+    <string name="time_up_message">Waktumu sudah habis, kamu bisa memberikan ponsel ke orang dewasa.</string>
+    <string name="blocked_app_title">Aplikasi ini sedang tidak ada di daftar</string>
+    <string name="time_up_recent">Waktu baru saja habis.</string>
+    <string name="remaining_time_format">Sisa waktu: %1$02d:%2$02d — pilih salah satu aplikasi yang diizinkan.</string>
+    <string name="parent_toggle">Kamu orang dewasa? Sentuh di sini untuk mengakhiri kunci</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Akhiri kunci</string>
+    <string name="pin_error">PIN salah</string>
+    <string name="toast_find_open_app">Cari dan buka \"Paydos\" di layar yang terbuka</string>
+    <string name="device_admin_explanation">Diperlukan agar Paydos tidak mudah dihapus selama sesi terkunci.</string>
+    <string name="toast_usage_access_needed">Urutan ini butuh izin \"Akses penggunaan\" dari Android. Di layar yang terbuka, cari \"Paydos\" pada daftar lalu izinkan.</string>
+    <string name="toast_open_permissions_first">Aktifkan dulu izin di atas</string>
+    <string name="toast_pick_valid_duration">Pilih durasi yang valid</string>
+    <string name="toast_pin_min_length_new">Buat PIN minimal 4 digit</string>
+    <string name="toast_pin_min_length_change">PIN baru harus minimal 4 digit</string>
+    <string name="toast_lock_started_format">Kunci dimulai: %1$d menit</string>
+    <string name="notification_title_active">Paydos aktif</string>
+    <string name="notification_remaining_format">Sisa waktu: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Timer Paydos</string>
+    <!-- Layar penjelasan izin Aksesibilitas -->
+    <string name="accessibility_disclosure_title">Tentang izin Aksesibilitas</string>
+    <string name="accessibility_disclosure_body">Paydos memerlukan izin Aksesibilitas Android agar bisa berfungsi selama kunci aktif. Sebelum melanjutkan, ini kegunaannya secara pasti:</string>
+    <string name="accessibility_disclosure_point_what">🔍 Yang dilakukan: selama kunci aktif, aplikasi memeriksa aplikasi apa yang sedang terbuka di layar.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Mengapa diperlukan: jika aplikasi yang tidak diizinkan dibuka, kamu akan otomatis diarahkan kembali ke layar kunci.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Yang tidak dilakukan: tidak membaca teks di layar, kata sandi, atau konten apa pun lainnya, dan tidak ada data yang pernah meninggalkan ponselmu.</string>
+    <string name="btn_disclosure_continue">Mengerti, lanjutkan</string>
+    <string name="btn_disclosure_cancel">Nanti saja</string>
+
+    <!-- Pemulihan / pop-up pengantar izin (ditambahkan belakangan) -->
+    <string name="forgot_pin_link">Lupa PIN?</string>
+    <string name="recovery_dialog_title">Masukkan jawaban pemulihan Anda</string>
+    <string name="recovery_dialog_positive">Verifikasi</string>
+    <string name="recovery_dialog_negative">Batal</string>
+    <string name="recovery_wrong_answer">Jawaban itu tidak benar, coba lagi</string>
+    <string name="recovery_not_set">Belum ada jawaban pemulihan yang diatur untuk kunci ini</string>
+    <string name="toast_recovery_answer_required">Atur juga jawaban pemulihan, agar Anda bisa membuka kunci jika lupa PIN</string>
+    <string name="recovery_restart_hint">Lupa PIN dan jawaban pemulihan sekaligus? Mematikan dan menghidupkan ulang ponsel akan menghapus kunci.</string>
+    <string name="recovery_answer_label">Jawaban pemulihan (wajib)</string>
+    <string name="recovery_answer_hint">Jika Anda lupa PIN, ini akan membuka kunci sebagai gantinya. Pilih sesuatu yang mudah Anda ingat tetapi tidak diketahui atau ditebak oleh anak Anda — bukan tahun lahir atau nama mereka. Contoh: nama hewan peliharaan pertama Anda, nama belakang guru favorit Anda, atau kota tempat Anda menyelesaikan SMA.</string>
+    <string name="recovery_answer_field_hint">Jawaban pemulihan Anda</string>
+    <string name="recovery_answer_label_saved">Jawaban pemulihan (tersimpan)</string>
+    <string name="recovery_answer_field_hint_saved">Masukkan jawaban baru untuk mengubahnya (opsional)</string>
+    <string name="recovery_question_label">Pertanyaan pemulihan</string>
+    <string-array name="recovery_questions">
+        <item>Siapa nama hewan peliharaan pertama Anda?</item>
+        <item>Siapa nama belakang guru favorit Anda?</item>
+        <item>Di kota mana Anda menyelesaikan SMA?</item>
+        <item>Apa merek mobil pertama Anda?</item>
+        <item>Siapa nama sahabat masa kecil Anda?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">Satu izin opsional lagi</string>
+    <string name="usage_access_dialog_positive">Izinkan</string>
+    <string name="usage_access_dialog_negative">Nanti saja</string>
+    <string name="permission_intro_title">Paydos memerlukan beberapa izin agar dapat berfungsi</string>
+    <string name="permission_intro_body">Tanpa izin ini, fitur kunci tidak akan berfungsi:\n\n• Aksesibilitas — untuk mengetahui aplikasi mana yang sedang dibuka\n• Admin Perangkat — agar aplikasi lebih sulit dihapus saat terkunci\n• Notifikasi — untuk memberi tahu sisa waktu\n\nTidak satu pun dari izin ini membaca layar Anda atau mengumpulkan data.</string>
+    <string name="permission_intro_button_wait">Mengerti (%1$d)</string>
+    <string name="permission_intro_button_ready">Mengerti, lanjutkan</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Perhatian: pada layar berikutnya, Android mungkin menampilkan peringatan merah \"Bahaya\". Ini adalah pesan sistem standar yang muncul untuk setiap aplikasi yang meminta izin ini, bukan sesuatu yang khusus untuk Paydos.</string>
+</resources>

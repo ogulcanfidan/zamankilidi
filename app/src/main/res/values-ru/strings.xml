@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">Позволяет Paydos видеть, какое приложение открыто на экране во время активного сеанса, и возвращать пользователя обратно, если открыто неразрешённое приложение. Содержимое экрана не читается.</string>
+    <string name="subtitle_main">Выбери длительность, отметь разрешённые приложения и отдай телефон ребёнку.</string>
+    <string name="permissions_card_title">🔐  Сначала нужно несколько разрешений</string>
+    <string name="permissions_card_body">Достаточно один раз нажать кнопку ниже - остальное я открою по порядку, тебе останется только нажимать «Разрешить»/«Включить» на каждом экране.</string>
+    <string name="btn_grant_permissions">Настроить разрешения</string>
+    <string name="pin_title_new">🔑  Установить PIN родителя</string>
+    <string name="pin_title_saved">🔑  PIN родителя (сохранён)</string>
+    <string name="pin_hint_new">PIN из 4 цифр</string>
+    <string name="pin_hint_change">Введи новый PIN, чтобы изменить его</string>
+    <string name="pin_card_body">Этот PIN понадобится, чтобы снять блокировку раньше времени. Выбери то, что ребёнок не знает.</string>
+    <string name="duration_card_title">⏱️  Длительность</string>
+    <string name="duration_15">15 мин</string>
+    <string name="duration_30">30 мин</string>
+    <string name="duration_60">1 час</string>
+    <string name="duration_custom_label">Другое:</string>
+    <string name="duration_custom_hint">мин</string>
+    <string name="apps_card_title">📱  Разрешённые приложения</string>
+    <string name="apps_card_body">Отметь приложения, которые ребёнок может открывать в это время.</string>
+    <string name="sort_recent">Недавние</string>
+    <string name="sort_most_used">Часто\nиспользуемые</string>
+    <string name="sort_alpha">А-Я</string>
+    <string name="btn_start_lock">Начать блокировку</string>
+    <string name="footer_privacy_note">🔒  Настройки и PIN хранятся только на этом телефоне.</string>
+    <string name="time_up_title">Время вышло</string>
+    <string name="time_up_message">Твоё время закончилось, можешь отдать телефон взрослому.</string>
+    <string name="blocked_app_title">Этого приложения сейчас нет в списке</string>
+    <string name="time_up_recent">Время только что закончилось.</string>
+    <string name="remaining_time_format">Осталось времени: %1$02d:%2$02d — выбери одно из разрешённых приложений.</string>
+    <string name="parent_toggle">Ты взрослый? Нажми здесь, чтобы снять блокировку</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Снять блокировку</string>
+    <string name="pin_error">Неверный PIN</string>
+    <string name="toast_find_open_app">Найди и открой «Paydos» на открывшемся экране</string>
+    <string name="device_admin_explanation">Нужно, чтобы Paydos нельзя было легко удалить во время активной блокировки.</string>
+    <string name="toast_usage_access_needed">Для этой сортировки нужно разрешение Android «Доступ к данным об использовании». На открывшемся экране найди «Paydos» в списке и разреши.</string>
+    <string name="toast_open_permissions_first">Сначала включи разрешения выше</string>
+    <string name="toast_pick_valid_duration">Выбери допустимую длительность</string>
+    <string name="toast_pin_min_length_new">Установи PIN не менее чем из 4 цифр</string>
+    <string name="toast_pin_min_length_change">Новый PIN должен содержать не менее 4 цифр</string>
+    <string name="toast_lock_started_format">Блокировка начата: %1$d мин</string>
+    <string name="notification_title_active">Paydos активен</string>
+    <string name="notification_remaining_format">Осталось времени: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Таймер Paydos</string>
+    <!-- Экран уведомления о разрешении «Специальные возможности» -->
+    <string name="accessibility_disclosure_title">О разрешении «Специальные возможности»</string>
+    <string name="accessibility_disclosure_body">Paydos нужно разрешение Android «Специальные возможности», чтобы работать во время активной блокировки. Прежде чем продолжить, вот для чего оно нужно:</string>
+    <string name="accessibility_disclosure_point_what">🔍 Что делает: пока блокировка активна, приложение проверяет, какое приложение открыто на экране.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Зачем это нужно: если открыто неразрешённое приложение, ты автоматически возвращаешься на экран блокировки.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Чего не делает: не читает текст на экране, пароли или любое другое содержимое, и никакие данные никогда не покидают твой телефон.</string>
+    <string name="btn_disclosure_continue">Понятно, продолжить</string>
+    <string name="btn_disclosure_cancel">Не сейчас</string>
+
+    <!-- Восстановление / вступительное окно о разрешениях (добавлено позже) -->
+    <string name="forgot_pin_link">Забыли PIN-код?</string>
+    <string name="recovery_dialog_title">Введите ответ для восстановления</string>
+    <string name="recovery_dialog_positive">Проверить</string>
+    <string name="recovery_dialog_negative">Отмена</string>
+    <string name="recovery_wrong_answer">Этот ответ неверен, попробуйте ещё раз</string>
+    <string name="recovery_not_set">Для этой блокировки не задан ответ для восстановления</string>
+    <string name="toast_recovery_answer_required">Задайте также ответ для восстановления, чтобы разблокировать устройство, если забудете PIN-код</string>
+    <string name="recovery_restart_hint">Забыли и PIN-код, и ответ для восстановления? Выключение и повторное включение телефона снимает блокировку.</string>
+    <string name="recovery_answer_label">Ответ для восстановления (обязательно)</string>
+    <string name="recovery_answer_hint">Если вы забудете PIN-код, это разблокирует устройство вместо него. Выберите что-то, что легко запомнить вам, но что ваш ребёнок не знает и не сможет угадать — не год рождения и не имя. Например: кличка вашего первого питомца, фамилия любимого учителя или город, где вы окончили школу.</string>
+    <string name="recovery_answer_field_hint">Ваш ответ для восстановления</string>
+    <string name="recovery_answer_label_saved">Ответ для восстановления (сохранён)</string>
+    <string name="recovery_answer_field_hint_saved">Введите новый, чтобы изменить (необязательно)</string>
+    <string name="recovery_question_label">Вопрос для восстановления</string>
+    <string-array name="recovery_questions">
+        <item>Кличка вашего первого питомца?</item>
+        <item>Фамилия вашего любимого учителя?</item>
+        <item>В каком городе вы окончили школу?</item>
+        <item>Марка вашего первого автомобиля?</item>
+        <item>Имя вашего лучшего друга детства?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">Ещё одно необязательное разрешение</string>
+    <string name="usage_access_dialog_positive">Разрешить</string>
+    <string name="usage_access_dialog_negative">Не сейчас</string>
+    <string name="permission_intro_title">Paydos нужно несколько разрешений для работы</string>
+    <string name="permission_intro_body">Без этих разрешений функция блокировки не будет работать:\n\n• Специальные возможности — чтобы видеть, какое приложение открыто\n• Администратор устройства — чтобы приложение было сложнее удалить во время блокировки\n• Уведомления — чтобы сообщать, сколько времени осталось\n\nНи одно из них не считывает экран и не собирает данные.</string>
+    <string name="permission_intro_button_wait">Понятно (%1$d)</string>
+    <string name="permission_intro_button_ready">Понятно, продолжить</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Обратите внимание: на следующем экране Android может показать красное предупреждение «Опасно». Это стандартное системное сообщение, которое появляется для любого приложения, запрашивающего это разрешение, а не что-то специфичное для Paydos.</string>
+</resources>

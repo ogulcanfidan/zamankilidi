@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">يتيح لتطبيق Paydos معرفة التطبيق المفتوح على الشاشة أثناء الجلسة النشطة، وإعادة التوجيه عند فتح تطبيق غير مسموح به. لا يقرأ محتوى الشاشة.</string>
+    <string name="subtitle_main">اختر المدة، حدّد التطبيقات المسموح بها، وسلّم الهاتف لطفلك.</string>
+    <string name="permissions_card_title">🔐  نحتاج بعض الأذونات أولًا</string>
+    <string name="permissions_card_body">يكفي الضغط مرة واحدة على الزر أدناه - سأفتح الباقي بالترتيب، وما عليك سوى الضغط على \"سماح\"/\"تفعيل\" في كل شاشة.</string>
+    <string name="btn_grant_permissions">إعداد الأذونات</string>
+    <string name="pin_title_new">🔑  إنشاء رمز PIN للوالدين</string>
+    <string name="pin_title_saved">🔑  رمز PIN للوالدين (محفوظ)</string>
+    <string name="pin_hint_new">رمز مكوّن من 4 أرقام</string>
+    <string name="pin_hint_change">أدخل رمزًا جديدًا لتغييره</string>
+    <string name="pin_card_body">ستحتاج هذا الرمز لإنهاء القفل قبل انتهاء الوقت. اختر رمزًا لا يعرفه طفلك.</string>
+    <string name="duration_card_title">⏱️  المدة</string>
+    <string name="duration_15">15 د</string>
+    <string name="duration_30">30 د</string>
+    <string name="duration_60">ساعة</string>
+    <string name="duration_custom_label">أخرى:</string>
+    <string name="duration_custom_hint">د</string>
+    <string name="apps_card_title">📱  التطبيقات المسموح بها</string>
+    <string name="apps_card_body">حدّد التطبيقات التي يمكن لطفلك فتحها خلال هذه المدة.</string>
+    <string name="sort_recent">الأحدث استخدامًا</string>
+    <string name="sort_most_used">الأكثر\nاستخدامًا</string>
+    <string name="sort_alpha">أبجديًا</string>
+    <string name="btn_start_lock">بدء القفل</string>
+    <string name="footer_privacy_note">🔒  إعداداتك ورمز PIN محفوظة على هذا الهاتف فقط.</string>
+    <string name="time_up_title">انتهى الوقت</string>
+    <string name="time_up_message">انتهى وقتك، يمكنك تسليم الهاتف لأحد الكبار.</string>
+    <string name="blocked_app_title">هذا التطبيق ليس ضمن القائمة الآن</string>
+    <string name="time_up_recent">انتهى الوقت للتو.</string>
+    <string name="remaining_time_format">الوقت المتبقي: %1$02d:%2$02d — اختر أحد التطبيقات المسموح بها.</string>
+    <string name="parent_toggle">هل أنت أحد الكبار؟ اضغط هنا لإنهاء القفل</string>
+    <string name="pin_hint_short">الرمز</string>
+    <string name="btn_unlock">إنهاء القفل</string>
+    <string name="pin_error">رمز غير صحيح</string>
+    <string name="toast_find_open_app">ابحث عن \"Paydos\" وافتحه في الشاشة التي ستظهر</string>
+    <string name="device_admin_explanation">ضروري حتى لا يمكن إزالة Paydos بسهولة أثناء الجلسة المقفلة.</string>
+    <string name="toast_usage_access_needed">يحتاج هذا الترتيب إذن \"الوصول إلى الاستخدام\" من Android. في الشاشة التي تظهر، ابحث عن \"Paydos\" في القائمة واسمح له.</string>
+    <string name="toast_open_permissions_first">فعّل الأذونات أعلاه أولًا</string>
+    <string name="toast_pick_valid_duration">اختر مدة صالحة</string>
+    <string name="toast_pin_min_length_new">أنشئ رمزًا من 4 أرقام على الأقل</string>
+    <string name="toast_pin_min_length_change">يجب أن يتكوّن الرمز الجديد من 4 أرقام على الأقل</string>
+    <string name="toast_lock_started_format">بدأ القفل: %1$d دقيقة</string>
+    <string name="notification_title_active">Paydos نشط</string>
+    <string name="notification_remaining_format">الوقت المتبقي: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">مؤقّت Paydos</string>
+    <!-- شاشة الإفصاح عن إذن إمكانية الوصول -->
+    <string name="accessibility_disclosure_title">حول إذن إمكانية الوصول</string>
+    <string name="accessibility_disclosure_body">يحتاج Paydos إلى إذن إمكانية الوصول من Android ليعمل أثناء تفعيل القفل. قبل المتابعة، إليك بالضبط الغرض منه:</string>
+    <string name="accessibility_disclosure_point_what">🔍 ماذا يفعل: أثناء تفعيل القفل، يتحقق من التطبيق المفتوح على الشاشة.</string>
+    <string name="accessibility_disclosure_point_why">↩️ لماذا هو ضروري: إذا تم فتح تطبيق غير مسموح به، يعيدك تلقائيًا إلى شاشة القفل.</string>
+    <string name="accessibility_disclosure_point_data">🔒 ما لا يفعله: لا يقرأ النص الظاهر على الشاشة، ولا كلمات المرور، ولا أي محتوى آخر، ولا تغادر أي بيانات هاتفك أبدًا.</string>
+    <string name="btn_disclosure_continue">فهمت، متابعة</string>
+    <string name="btn_disclosure_cancel">ليس الآن</string>
+
+    <!-- سلسلة الاسترداد ونافذة مقدمة الأذونات (أُضيفت لاحقًا) -->
+    <string name="forgot_pin_link">هل نسيت رمز PIN؟</string>
+    <string name="recovery_dialog_title">أدخل إجابة الاسترداد الخاصة بك</string>
+    <string name="recovery_dialog_positive">تحقّق</string>
+    <string name="recovery_dialog_negative">إلغاء</string>
+    <string name="recovery_wrong_answer">هذه الإجابة غير صحيحة، حاول مرة أخرى</string>
+    <string name="recovery_not_set">لم يتم تعيين إجابة استرداد لهذا القفل</string>
+    <string name="toast_recovery_answer_required">عيّن أيضًا إجابة استرداد حتى تتمكن من فتح القفل إذا نسيت رمز PIN</string>
+    <string name="recovery_restart_hint">نسيت رمز PIN وإجابة الاسترداد معًا؟ إيقاف تشغيل الهاتف وإعادة تشغيله يزيل القفل.</string>
+    <string name="recovery_answer_label">إجابة الاسترداد (مطلوبة)</string>
+    <string name="recovery_answer_hint">إذا نسيت رمز PIN، فهذا يفتح القفل بدلاً منه. اختر شيئًا يسهل عليك تذكره لكن طفلك لا يعرفه أو يستطيع تخمينه — ليس سنة ميلاده أو اسمه. مثال: اسم حيوانك الأليف الأول، اسم عائلة معلمك المفضل، أو المدينة التي أنهيت فيها الثانوية.</string>
+    <string name="recovery_answer_field_hint">إجابة الاسترداد الخاصة بك</string>
+    <string name="recovery_answer_label_saved">إجابة الاسترداد (محفوظة)</string>
+    <string name="recovery_answer_field_hint_saved">أدخل إجابة جديدة لتغييرها (اختياري)</string>
+    <string name="recovery_question_label">سؤال الاسترداد</string>
+    <string-array name="recovery_questions">
+        <item>ما اسم حيوانك الأليف الأول؟</item>
+        <item>ما اسم عائلة معلمك المفضل؟</item>
+        <item>في أي مدينة أنهيت المرحلة الثانوية؟</item>
+        <item>ما ماركة سيارتك الأولى؟</item>
+        <item>ما اسم أفضل صديق لك في الطفولة؟</item>
+    </string-array>
+    <string name="usage_access_dialog_title">إذن اختياري إضافي</string>
+    <string name="usage_access_dialog_positive">سماح</string>
+    <string name="usage_access_dialog_negative">ليس الآن</string>
+    <string name="permission_intro_title">يحتاج Paydos إلى بعض الأذونات ليعمل</string>
+    <string name="permission_intro_body">بدون هذه الأذونات، لن تعمل ميزة القفل:\n\n• إمكانية الوصول — لمعرفة أي تطبيق مفتوح\n• مسؤول الجهاز — لجعل حذف التطبيق أثناء القفل أصعب\n• الإشعارات — لإخبارك بالوقت المتبقي\n\nولا يقرأ أي منها شاشتك أو يجمع بياناتك.</string>
+    <string name="permission_intro_button_wait">فهمت (%1$d)</string>
+    <string name="permission_intro_button_ready">فهمت، متابعة</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ تنبيه: في الشاشة التالية، قد يعرض Android تحذيرًا أحمر بعنوان \"خطر\". هذه رسالة نظام قياسية تظهر لأي تطبيق يطلب هذا الإذن، وليست خاصة بتطبيق Paydos.</string>
+</resources>

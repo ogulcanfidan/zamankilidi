@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">Permite que o Paydos veja qual app está na tela enquanto uma sessão está ativa e redirecione quando um app não permitido for aberto. Não lê o conteúdo da tela.</string>
+    <string name="subtitle_main">Escolha uma duração, marque os apps permitidos e entregue o celular para seu filho.</string>
+    <string name="permissions_card_title">🔐  Primeiro, precisamos de algumas permissões</string>
+    <string name="permissions_card_body">Basta tocar uma vez no botão abaixo - eu abro o resto em ordem, você só precisa tocar em \"Permitir\"/\"Ativar\" em cada tela.</string>
+    <string name="btn_grant_permissions">Configurar permissões</string>
+    <string name="pin_title_new">🔑  Defina um PIN de responsável</string>
+    <string name="pin_title_saved">🔑  PIN de responsável (salvo)</string>
+    <string name="pin_hint_new">PIN de 4 dígitos</string>
+    <string name="pin_hint_change">Digite um novo PIN para alterá-lo</string>
+    <string name="pin_card_body">Você vai precisar desse PIN para encerrar o bloqueio antes do tempo acabar. Escolha algo que seu filho não saiba.</string>
+    <string name="duration_card_title">⏱️  Duração</string>
+    <string name="duration_15">15 min</string>
+    <string name="duration_30">30 min</string>
+    <string name="duration_60">1 hora</string>
+    <string name="duration_custom_label">Outro:</string>
+    <string name="duration_custom_hint">min</string>
+    <string name="apps_card_title">📱  Apps permitidos</string>
+    <string name="apps_card_body">Marque os apps que seu filho pode abrir durante esse tempo.</string>
+    <string name="sort_recent">Usados recentemente</string>
+    <string name="sort_most_used">Mais\nusados</string>
+    <string name="sort_alpha">A-Z</string>
+    <string name="btn_start_lock">Iniciar bloqueio</string>
+    <string name="footer_privacy_note">🔒  Suas configurações e PIN ficam salvos só neste celular.</string>
+    <string name="time_up_title">Tempo esgotado</string>
+    <string name="time_up_message">Seu tempo acabou, você já pode entregar o celular para um adulto.</string>
+    <string name="blocked_app_title">Este app não está na lista agora</string>
+    <string name="time_up_recent">O tempo acabou de esgotar.</string>
+    <string name="remaining_time_format">Tempo restante: %1$02d:%2$02d — escolha um dos apps permitidos.</string>
+    <string name="parent_toggle">Você é um adulto? Toque aqui para encerrar o bloqueio</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Encerrar bloqueio</string>
+    <string name="pin_error">PIN incorreto</string>
+    <string name="toast_find_open_app">Encontre e abra o \"Paydos\" na tela que vai abrir</string>
+    <string name="device_admin_explanation">Necessário para que o Paydos não seja facilmente desinstalado durante uma sessão bloqueada.</string>
+    <string name="toast_usage_access_needed">Essa ordenação precisa da permissão \"Acesso de uso\" do Android. Na tela que abrir, encontre \"Paydos\" na lista e permita.</string>
+    <string name="toast_open_permissions_first">Ative as permissões acima primeiro</string>
+    <string name="toast_pick_valid_duration">Escolha uma duração válida</string>
+    <string name="toast_pin_min_length_new">Defina um PIN com pelo menos 4 dígitos</string>
+    <string name="toast_pin_min_length_change">O novo PIN precisa ter pelo menos 4 dígitos</string>
+    <string name="toast_lock_started_format">Bloqueio iniciado: %1$d min</string>
+    <string name="notification_title_active">Paydos está ativo</string>
+    <string name="notification_remaining_format">Tempo restante: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Cronômetro do Paydos</string>
+    <!-- Tela de aviso sobre a permissão de Acessibilidade -->
+    <string name="accessibility_disclosure_title">Sobre a permissão de Acessibilidade</string>
+    <string name="accessibility_disclosure_body">O Paydos precisa da permissão de Acessibilidade do Android para funcionar enquanto um bloqueio está ativo. Antes de continuar, veja exatamente para que ela serve:</string>
+    <string name="accessibility_disclosure_point_what">🔍 O que ela faz: enquanto o bloqueio está ativo, verifica qual app está aberto na tela.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Por que é necessária: se um app não permitido for aberto, você é levado automaticamente de volta à tela de bloqueio.</string>
+    <string name="accessibility_disclosure_point_data">🔒 O que ela não faz: não lê texto na tela, senhas ou qualquer outro conteúdo, e nenhum dado sai do seu celular.</string>
+    <string name="btn_disclosure_continue">Entendi, continuar</string>
+    <string name="btn_disclosure_cancel">Agora não</string>
+
+    <!-- Recuperação / pop-up de introdução às permissões (adicionado depois) -->
+    <string name="forgot_pin_link">Esqueceu o PIN?</string>
+    <string name="recovery_dialog_title">Digite sua resposta de recuperação</string>
+    <string name="recovery_dialog_positive">Verificar</string>
+    <string name="recovery_dialog_negative">Cancelar</string>
+    <string name="recovery_wrong_answer">Essa resposta não está correta, tente novamente</string>
+    <string name="recovery_not_set">Nenhuma resposta de recuperação foi definida para este bloqueio</string>
+    <string name="toast_recovery_answer_required">Defina também uma resposta de recuperação, para poder desbloquear se esquecer o PIN</string>
+    <string name="recovery_restart_hint">Esqueceu o PIN e a resposta de recuperação? Desligar e ligar o celular novamente remove o bloqueio.</string>
+    <string name="recovery_answer_label">Resposta de recuperação (obrigatória)</string>
+    <string name="recovery_answer_hint">Se você esquecer o PIN, isso desbloqueia no lugar dele. Escolha algo fácil de lembrar para você, mas que seu filho não saiba ou consiga adivinhar — não o ano de nascimento nem o nome dele. Por exemplo: o nome do seu primeiro animal de estimação, o sobrenome do seu professor favorito ou a cidade onde você terminou o ensino médio.</string>
+    <string name="recovery_answer_field_hint">Sua resposta de recuperação</string>
+    <string name="recovery_answer_label_saved">Resposta de recuperação (salva)</string>
+    <string name="recovery_answer_field_hint_saved">Digite uma nova para alterá-la (opcional)</string>
+    <string name="recovery_question_label">Pergunta de recuperação</string>
+    <string-array name="recovery_questions">
+        <item>Qual era o nome do seu primeiro animal de estimação?</item>
+        <item>Qual é o sobrenome do seu professor favorito?</item>
+        <item>Em qual cidade você terminou o ensino médio?</item>
+        <item>Qual era a marca do seu primeiro carro?</item>
+        <item>Qual era o nome do seu melhor amigo de infância?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">Mais uma permissão opcional</string>
+    <string name="usage_access_dialog_positive">Permitir</string>
+    <string name="usage_access_dialog_negative">Agora não</string>
+    <string name="permission_intro_title">O Paydos precisa de algumas permissões para funcionar</string>
+    <string name="permission_intro_body">Sem essas permissões, o recurso de bloqueio não funcionará:\n\n• Acessibilidade — para saber qual app está aberto\n• Administrador do dispositivo — para dificultar a remoção do app enquanto estiver bloqueado\n• Notificações — para avisar quanto tempo resta\n\nNenhuma delas lê sua tela ou coleta dados.</string>
+    <string name="permission_intro_button_wait">Entendi (%1$d)</string>
+    <string name="permission_intro_button_ready">Entendi, continuar</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Atenção: na próxima tela, o Android pode mostrar um aviso vermelho de \"Perigo\". Esta é uma mensagem padrão do sistema exibida para qualquer app que solicite essa permissão, não é algo específico do Paydos.</string>
+</resources>

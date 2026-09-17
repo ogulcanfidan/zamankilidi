@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">Permet à Paydos de voir quelle application est à l\'écran pendant une session active et de rediriger si une application non autorisée est ouverte. Ne lit pas le contenu de l\'écran.</string>
+    <string name="subtitle_main">Choisis une durée, coche les applications autorisées, donne le téléphone à ton enfant.</string>
+    <string name="permissions_card_title">🔐  Quelques autorisations sont nécessaires</string>
+    <string name="permissions_card_body">Un seul appui sur le bouton ci-dessous suffit - j\'ouvrirai le reste dans l\'ordre, tu n\'as qu\'à appuyer sur \"Autoriser\"/\"Activer\" à chaque écran.</string>
+    <string name="btn_grant_permissions">Configurer les autorisations</string>
+    <string name="pin_title_new">🔑  Définir un code parent</string>
+    <string name="pin_title_saved">🔑  Code parent (enregistré)</string>
+    <string name="pin_hint_new">Code à 4 chiffres</string>
+    <string name="pin_hint_change">Saisis un nouveau code pour le changer</string>
+    <string name="pin_card_body">Ce code te permettra d\'arrêter le verrouillage avant la fin du temps. Choisis quelque chose que ton enfant ne connaît pas.</string>
+    <string name="duration_card_title">⏱️  Durée</string>
+    <string name="duration_15">15 min</string>
+    <string name="duration_30">30 min</string>
+    <string name="duration_60">1 heure</string>
+    <string name="duration_custom_label">Autre :</string>
+    <string name="duration_custom_hint">min</string>
+    <string name="apps_card_title">📱  Applications autorisées</string>
+    <string name="apps_card_body">Coche les applications que ton enfant peut ouvrir pendant ce temps.</string>
+    <string name="sort_recent">Récemment utilisées</string>
+    <string name="sort_most_used">Les plus\nutilisées</string>
+    <string name="sort_alpha">A-Z</string>
+    <string name="btn_start_lock">Démarrer le verrouillage</string>
+    <string name="footer_privacy_note">🔒  Tes réglages et ton code restent uniquement sur ce téléphone.</string>
+    <string name="time_up_title">Temps écoulé</string>
+    <string name="time_up_message">Ton temps est écoulé, tu peux rendre le téléphone à un adulte.</string>
+    <string name="blocked_app_title">Cette application n\'est pas sur la liste pour le moment</string>
+    <string name="time_up_recent">Le temps vient de s\'écouler.</string>
+    <string name="remaining_time_format">Temps restant : %1$02d:%2$02d — choisis l\'une des applications autorisées.</string>
+    <string name="parent_toggle">Tu es un adulte ? Appuie ici pour arrêter le verrouillage</string>
+    <string name="pin_hint_short">Code</string>
+    <string name="btn_unlock">Arrêter le verrouillage</string>
+    <string name="pin_error">Code incorrect</string>
+    <string name="toast_find_open_app">Trouve et ouvre \"Paydos\" sur l\'écran qui s\'ouvre</string>
+    <string name="device_admin_explanation">Nécessaire pour que Paydos ne puisse pas être facilement désinstallée pendant une session verrouillée.</string>
+    <string name="toast_usage_access_needed">Ce tri nécessite l\'autorisation \"Accès aux données d\'utilisation\" d\'Android. Sur l\'écran qui s\'ouvre, trouve \"Paydos\" dans la liste et autorise-la.</string>
+    <string name="toast_open_permissions_first">Active d\'abord les autorisations ci-dessus</string>
+    <string name="toast_pick_valid_duration">Choisis une durée valide</string>
+    <string name="toast_pin_min_length_new">Définis un code d\'au moins 4 chiffres</string>
+    <string name="toast_pin_min_length_change">Le nouveau code doit comporter au moins 4 chiffres</string>
+    <string name="toast_lock_started_format">Verrouillage démarré : %1$d min</string>
+    <string name="notification_title_active">Paydos est actif</string>
+    <string name="notification_remaining_format">Temps restant : %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Minuteur Paydos</string>
+    <!-- Écran d'information sur la permission Accessibilité -->
+    <string name="accessibility_disclosure_title">À propos de la permission Accessibilité</string>
+    <string name="accessibility_disclosure_body">Paydos a besoin de la permission Accessibilité d\'Android pour fonctionner pendant qu\'un verrouillage est actif. Avant de continuer, voici exactement à quoi elle sert :</string>
+    <string name="accessibility_disclosure_point_what">🔍 Ce qu\'elle fait : pendant que le verrouillage est actif, elle vérifie quelle application est ouverte à l\'écran.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Pourquoi c\'est nécessaire : si une application non autorisée est ouverte, tu es automatiquement redirigé vers l\'écran de verrouillage.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Ce qu\'elle ne fait pas : elle ne lit ni le texte à l\'écran, ni les mots de passe, ni aucun autre contenu, et aucune donnée ne quitte jamais ton téléphone.</string>
+    <string name="btn_disclosure_continue">Compris, continuer</string>
+    <string name="btn_disclosure_cancel">Pas maintenant</string>
+
+    <!-- Récupération / pop-up d'introduction des autorisations (ajouté plus tard) -->
+    <string name="forgot_pin_link">PIN oublié ?</string>
+    <string name="recovery_dialog_title">Saisis ta réponse de récupération</string>
+    <string name="recovery_dialog_positive">Vérifier</string>
+    <string name="recovery_dialog_negative">Annuler</string>
+    <string name="recovery_wrong_answer">Cette réponse n\'est pas correcte, réessaie</string>
+    <string name="recovery_not_set">Aucune réponse de récupération n\'a été définie pour ce verrouillage</string>
+    <string name="toast_recovery_answer_required">Définis aussi une réponse de récupération, pour pouvoir déverrouiller si tu oublies ton PIN</string>
+    <string name="recovery_restart_hint">Tu as oublié le PIN et la réponse de récupération ? Éteindre puis rallumer le téléphone supprime le verrouillage.</string>
+    <string name="recovery_answer_label">Réponse de récupération (obligatoire)</string>
+    <string name="recovery_answer_hint">Si tu oublies ton PIN, ceci le débloque à la place. Choisis quelque chose de facile à retenir pour toi mais que ton enfant ne connaîtrait ni ne devinerait pas — pas son année de naissance ni son prénom. Par exemple : le nom de ton premier animal, le nom de famille de ton professeur préféré, ou la ville où tu as terminé le lycée.</string>
+    <string name="recovery_answer_field_hint">Ta réponse de récupération</string>
+    <string name="recovery_answer_label_saved">Réponse de récupération (enregistrée)</string>
+    <string name="recovery_answer_field_hint_saved">Saisis-en une nouvelle pour la changer (facultatif)</string>
+    <string name="recovery_question_label">Question de récupération</string>
+    <string-array name="recovery_questions">
+        <item>Quel était le nom de ton premier animal de compagnie ?</item>
+        <item>Quel est le nom de famille de ton professeur préféré ?</item>
+        <item>Dans quelle ville as-tu terminé le lycée ?</item>
+        <item>Quelle était la marque de ta première voiture ?</item>
+        <item>Quel était le prénom de ton meilleur ami d\'enfance ?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">Une autorisation de plus, facultative</string>
+    <string name="usage_access_dialog_positive">Autoriser</string>
+    <string name="usage_access_dialog_negative">Pas maintenant</string>
+    <string name="permission_intro_title">Paydos a besoin de quelques autorisations pour fonctionner</string>
+    <string name="permission_intro_body">Sans ces autorisations, la fonction de verrouillage ne fonctionnera pas :\n\n• Accessibilité — pour savoir quelle application est ouverte\n• Administrateur de l\'appareil — pour empêcher la suppression facile de l\'application pendant le verrouillage\n• Notifications — pour indiquer le temps restant\n\nAucune d\'elles ne lit votre écran ni ne collecte de données.</string>
+    <string name="permission_intro_button_wait">Compris (%1$d)</string>
+    <string name="permission_intro_button_ready">Compris, continuer</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Attention : sur l\'écran suivant, Android peut afficher un avertissement rouge « Danger ». C\'est un message système standard affiché pour toute application demandant cette permission, rien de spécifique à Paydos.</string>
+</resources>

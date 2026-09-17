@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    "PIN'imi unuttum" akışında gösterilen kurtarma dialog'u. Kullanıcı önce
+    PIN belirlerken seçtiği soruyu listeden seçiyor, sonra o soruya verdiği
+    cevabı yazıyor - ikisi de doğru olmadan kilit açılmıyor (bkz.
+    SessionManager.checkRecoveryAnswer).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recovery_question_label"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spRecoveryQuestionDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_input"
+        android:entries="@array/recovery_questions"
+        android:padding="14dp"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recovery_answer_label"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etRecoveryAnswerDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_input"
+        android:hint="@string/recovery_answer_field_hint"
+        android:inputType="textNoSuggestions"
+        android:maxLength="40"
+        android:padding="14dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_dim" />
+
+</LinearLayout>

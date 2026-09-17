@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dış kapsayıcı: içerik kaydırılabilir alanda (ScrollView), banner reklam
+     ise ekranın en altında sabit duruyor - bu ekran tamamen ebeveyne ait,
+     çocuğun hiç göremeyeceği bir yer. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title_header"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/subtitle_main"
+            android:textColor="@color/text_dim"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- İzinler kartı -->
+        <LinearLayout
+            android:id="@+id/permissionsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions_card_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/permissions_card_body"
+                android:textColor="@color/text_dim"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp" />
+
+            <Button
+                android:id="@+id/btnGrantPermissions"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:backgroundTint="@color/accent"
+                android:text="@string/btn_grant_permissions"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                app:cornerRadius="14dp" />
+
+        </LinearLayout>
+
+        <!-- PIN kartı -->
+        <LinearLayout
+            android:id="@+id/pinCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tvPinTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pin_title_new"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/pin_card_body"
+                android:textColor="@color/text_dim"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp" />
+
+            <EditText
+                android:id="@+id/etPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input"
+                android:hint="@string/pin_hint_new"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:padding="14dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_dim" />
+
+            <TextView
+                android:id="@+id/tvRecoveryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/recovery_answer_label"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvRecoveryHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/recovery_answer_hint"
+                android:textColor="@color/text_dim"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:id="@+id/tvRecoveryQuestionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/recovery_question_label"
+                android:textColor="@color/text_dim"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/spRecoveryQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_input"
+                android:entries="@array/recovery_questions"
+                android:padding="14dp"
+                android:spinnerMode="dialog" />
+
+            <EditText
+                android:id="@+id/etRecoveryAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input"
+                android:hint="@string/recovery_answer_field_hint"
+                android:inputType="textNoSuggestions"
+                android:maxLength="40"
+                android:padding="14dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_dim" />
+
+            <!-- Bu ipucu KASITLI olarak sadece burada, ana ayar ekranında
+                 (MainActivity) duruyor - çocuk aktif bir oturum sırasında bu
+                 ekrana hiç erişemiyor (bkz. MainActivity.onResume, aktif
+                 oturumda doğrudan BlockActivity'e yönlendiriyor). Kilit
+                 ekranındaki (BlockActivity) "PIN'imi unuttum" akışına
+                 BİLEREK eklenmedi - orası çocuğun da görebildiği bir yer,
+                 oraya konursa çocuğa kilidi atlatacak bir yöntem öğretmiş
+                 oluruz. -->
+            <TextView
+                android:id="@+id/tvRecoveryRestartHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/recovery_restart_hint"
+                android:textColor="@color/text_dim"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp" />
+
+        </LinearLayout>
+
+        <!-- Süre kartı -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/duration_card_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:gravity="center"
+                    android:text="@string/duration_15"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rb30"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:gravity="center"
+                    android:text="@string/duration_30"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rb60"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/duration_60"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="13sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/accent"
+                    android:text="@string/duration_custom_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etCustomMinutes"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="@string/duration_custom_hint"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_dim" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Uygulama listesi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/apps_card_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/apps_card_body"
+                android:textColor="@color/text_dim"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp" />
+
+            <RadioGroup
+                android:id="@+id/rgSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbSortRecent"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:gravity="center"
+                    android:paddingHorizontal="2dp"
+                    android:lineSpacingExtra="1dp"
+                    android:text="@string/sort_recent"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/rbSortMostUsed"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:gravity="center"
+                    android:paddingHorizontal="2dp"
+                    android:lineSpacingExtra="1dp"
+                    android:text="@string/sort_most_used"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/rbSortAlpha"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_chip_selector"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingHorizontal="2dp"
+                    android:text="@string/sort_alpha"
+                    android:textColor="@color/chip_text_selector"
+                    android:textSize="11sp" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:background="@color/border" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvApps"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/accent"
+            android:text="@string/btn_start_lock"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="@string/footer_privacy_note"
+            android:textColor="@color/text_dim"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bg"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2569162850712494/3062465925" />
+
+</LinearLayout>

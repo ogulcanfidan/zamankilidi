@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+    <string name="accessibility_service_description">Lets Paydos see which app is on screen while a session is active, and redirect back when a not-allowed app is opened. It does not read screen content.</string>
+    <string name="subtitle_main">Pick a duration, choose which apps are allowed, hand the phone to your child.</string>
+    <string name="permissions_card_title">🔐  A few permissions needed first</string>
+    <string name="permissions_card_body">One tap on the button below is enough - I\'ll open the rest in order, you just tap \"Allow\"/\"Turn on\" on each screen.</string>
+    <string name="btn_grant_permissions">Set up permissions</string>
+    <string name="pin_title_new">🔑  Set a parent PIN</string>
+    <string name="pin_title_saved">🔑  Parent PIN (saved)</string>
+    <string name="pin_hint_new">4-digit PIN</string>
+    <string name="pin_hint_change">Enter a new PIN to change it</string>
+    <string name="pin_card_body">You\'ll need this PIN to end the lock before time is up. Pick something your child doesn\'t know.</string>
+    <string name="duration_card_title">⏱️  Duration</string>
+    <string name="duration_15">15 min</string>
+    <string name="duration_30">30 min</string>
+    <string name="duration_60">1 hour</string>
+    <string name="duration_custom_label">Other:</string>
+    <string name="duration_custom_hint">min</string>
+    <string name="apps_card_title">📱  Allowed apps</string>
+    <string name="apps_card_body">Check the apps your child can open during this time.</string>
+    <string name="sort_recent">Recently used</string>
+    <string name="sort_most_used">Most used</string>
+    <string name="sort_alpha">A-Z</string>
+    <string name="btn_start_lock">Start lock</string>
+    <string name="footer_privacy_note">🔒  Your settings and PIN are only stored on this phone.</string>
+    <string name="time_up_title">Time\'s up</string>
+    <string name="time_up_message">Your time is up - you can hand the phone to a grown-up.</string>
+    <string name="blocked_app_title">This app isn\'t on the list right now</string>
+    <string name="time_up_recent">Time just ran out.</string>
+    <string name="remaining_time_format">Time left: %1$02d:%2$02d - pick one of the allowed apps.</string>
+    <string name="parent_toggle">Are you a grown-up? Tap here to end the lock</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">End lock</string>
+    <string name="pin_error">Wrong PIN</string>
+    <string name="toast_find_open_app">Find and open \"Paydos\" on the screen that opens</string>
+    <string name="device_admin_explanation">Needed so Paydos can\'t be easily removed while a session is locked.</string>
+    <string name="toast_usage_access_needed">This sort option needs Android\'s \"Usage access\" permission. On the screen that opens, find \"Paydos\" in the list and allow it.</string>
+    <string name="toast_open_permissions_first">Turn on the permissions above first</string>
+    <string name="toast_pick_valid_duration">Pick a valid duration</string>
+    <string name="toast_pin_min_length_new">Set a PIN with at least 4 digits</string>
+    <string name="toast_pin_min_length_change">The new PIN must have at least 4 digits</string>
+    <string name="toast_lock_started_format">Lock started: %1$d min</string>
+    <string name="notification_title_active">Paydos is active</string>
+    <string name="notification_remaining_format">Time left: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos timer</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">About the Accessibility permission</string>
+    <string name="accessibility_disclosure_body">Paydos needs Android\'s Accessibility permission to work while a lock session is active. Before you continue, here\'s exactly what it\'s for:</string>
+    <string name="accessibility_disclosure_point_what">🔍 What it does: while the lock is active, it checks which app is open on screen.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Why it\'s needed: if a not-allowed app is opened, it automatically sends you back to the lock screen.</string>
+    <string name="accessibility_disclosure_point_data">🔒 What it doesn\'t do: it doesn\'t read on-screen text, passwords, or any other content, and no data ever leaves your phone.</string>
+    <string name="btn_disclosure_continue">Understood, continue</string>
+    <string name="btn_disclosure_cancel">Not now</string>
+
+    <!-- Recovery / permission-intro strings (added later, kept in sync with default values/) -->
+    <string name="forgot_pin_link">Forgot your PIN?</string>
+    <string name="recovery_dialog_title">Enter your recovery answer</string>
+    <string name="recovery_dialog_positive">Verify</string>
+    <string name="recovery_dialog_negative">Cancel</string>
+    <string name="recovery_wrong_answer">That answer isn\'t right, try again</string>
+    <string name="recovery_not_set">No recovery answer was set up for this lock</string>
+    <string name="toast_recovery_answer_required">Set a recovery answer too, so you can unlock if you forget your PIN</string>
+    <string name="recovery_restart_hint">Forgot both the PIN and the recovery answer? Turning the phone off and back on removes the lock.</string>
+    <string name="recovery_answer_label">Recovery answer (required)</string>
+    <string name="recovery_answer_hint">If you forget your PIN, this unlocks it instead. Pick something easy for you to remember but that your child wouldn\'t know or guess — not their birth year or name. For example: your first pet\'s name, your favorite teacher\'s last name, or the city you finished high school in.</string>
+    <string name="recovery_answer_field_hint">Your recovery answer</string>
+    <string name="recovery_answer_label_saved">Recovery answer (saved)</string>
+    <string name="recovery_answer_field_hint_saved">Enter a new one to change it (optional)</string>
+    <string name="recovery_question_label">Recovery question</string>
+    <string-array name="recovery_questions">
+        <item>What was your first pet\'s name?</item>
+        <item>What is your favorite teacher\'s last name?</item>
+        <item>Which city did you finish high school in?</item>
+        <item>What was the make of your first car?</item>
+        <item>What was your childhood best friend\'s name?</item>
+    </string-array>
+    <string name="usage_access_dialog_title">One more optional permission</string>
+    <string name="usage_access_dialog_positive">Allow</string>
+    <string name="usage_access_dialog_negative">Not now</string>
+    <string name="permission_intro_title">Paydos needs a few permissions to work</string>
+    <string name="permission_intro_body">Without these, the lock feature won\'t work:\n\n• Accessibility — to see which app is open\n• Device Admin — to make it harder to remove the app while locked\n• Notifications — to tell you how much time is left\n\nNone of them read your screen or collect data.</string>
+    <string name="permission_intro_button_wait">Got it (%1$d)</string>
+    <string name="permission_intro_button_ready">Got it, continue</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Heads up: on the next screen, Android may show a red \"Danger\" warning. This is a standard system message shown for every app that requests this permission — not something specific to Paydos.</string>
+</resources>
