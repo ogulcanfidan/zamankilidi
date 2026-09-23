@@ -125,10 +125,11 @@
         android:textSize="13sp"
         android:visibility="gone" />
 
-    <!-- Banner reklam SADECE pinRow ile aynı anda görünür - yani sadece PIN
-         alanı açıkken (blocked_app modunda "Ebeveyn misiniz?" onaylandıktan
-         sonra, time_up modunda ise zaten baştan) gösterilir. Görünürlüğü
-         kod tarafında pinRow ile birlikte, elle senkron tutuluyor. -->
+    <!-- Banner reklam. DİKKAT: burada "gone" ile başlaması güvenliğin bir
+         parçası - görünür hale gelmesinin TEK yolu, blocked_app modunda
+         "Ebeveyn misiniz?" bağlantısına dokunulması (bkz.
+         BlockActivity.revealParentArea). "Süre doldu" ekranında, yani çocuğun
+         baktığı ekranda hiçbir koşulda gösterilmez. -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adViewBlock"
         android:layout_width="match_parent"

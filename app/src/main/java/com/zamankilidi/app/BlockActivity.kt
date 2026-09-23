@@ -38,11 +38,17 @@ class BlockActivity : AppCompatActivity() {
         // bilmediği için bu ekrana hiç ulaşamaz.
         private const val INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-2569162850712494/6714926004"
 
-        // Banner reklam - SADECE pinRow ile aynı anda görünür (bkz.
-        // setPinAreaVisible). blocked_app modunda bu, "Ebeveyn misiniz?"
-        // onaylandıktan sonra demek; time_up modunda ise zaten baştan.
-        // Çocuğun normalde gördüğü ekranda banner de yoktur.
-        private const val BANNER_AD_UNIT_ID = "ca-app-pub-2569162850712494/3062465925"
+        // Banner reklam (birim kimliği layout'ta, app:adUnitId).
+        //
+        // KURAL: Banner yalnızca "Ebeveyn misiniz?" bağlantısına dokunulunca
+        // ortaya çıkar ve SADECE blocked_app modunda. "Süre doldu" (time_up)
+        // ekranında hiçbir koşulda gösterilmez - çocuğun baktığı ekran orası.
+        //
+        // Eskiden banner, PIN alanıyla birlikte setPinAreaVisible tarafından
+        // yönetiliyordu. time_up modunda PIN alanı baştan açık olduğu için
+        // banner da doğrudan çocuğun ekranında kalıyordu. Bu yüzden ikisi
+        // artık ayrıldı: PIN alanı setPinAreaVisible ile, banner yalnızca
+        // revealParentArea ile açılıyor.
     }
 
     private lateinit var binding: ActivityBlockBinding
@@ -52,6 +58,10 @@ class BlockActivity : AppCompatActivity() {
     // hazırsa gösterilir; hazır değilse akış hiç beklemeden devam eder -
     // reklam asla kilidin kaldırılmasını geciktirmez.
     private var interstitialAd: InterstitialAd? = null
+
+    // Banner'a yalnızca görünür yapıldıktan sonra dokunuyoruz; hiç
+    // gösterilmediyse resume/pause/destroy çağırmaya da gerek yok.
+    private var bannerShown = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +79,6 @@ class BlockActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
         loadInterstitialAd()
-        binding.adViewBlock.loadAd(AdRequest.Builder().build())
     }
 
     private fun loadInterstitialAd() {
@@ -92,7 +101,7 @@ class BlockActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        binding.adViewBlock.resume()
+        if (bannerShown) binding.adViewBlock.resume()
         // Oturum bir şekilde (ör. başka bir yoldan) zaten bittiyse ekranı kapat.
         if (!SessionManager.isActive(this)) {
             finish()
@@ -101,17 +110,38 @@ class BlockActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        binding.adViewBlock.pause()
+        if (bannerShown) binding.adViewBlock.pause()
     }
 
-    // pinRow, "PIN'imi unuttum" linki ve banner reklamı her zaman birlikte
-    // görünür/gizlenir - hiçbiri PIN alanından bağımsız, tek başına
-    // gösterilmez.
+    // pinRow ve "PIN'imi unuttum" linki her zaman birlikte görünür/gizlenir.
+    // Banner BİLEREK buraya dahil değil - bkz. companion object'teki kural.
     private fun setPinAreaVisible(visible: Boolean) {
         val v = if (visible) android.view.View.VISIBLE else android.view.View.GONE
         binding.pinRow.visibility = v
         binding.tvForgotPin.visibility = v
-        binding.adViewBlock.visibility = v
+    }
+
+    // Ebeveynin "Ebeveyn misiniz?" bağlantısına dokunmasıyla çalışan tek yol.
+    // Banner buradan başka hiçbir yerde görünür yapılmıyor; reklam isteği de
+    // ancak burada gönderiliyor, yani hiç gösterilmeyecek bir reklam için
+    // boşuna istek atılmıyor.
+    private fun revealParentArea() {
+        setPinAreaVisible(true)
+        binding.tvParentToggle.visibility = android.view.View.GONE
+        if (!bannerShown) {
+            bannerShown = true
+            binding.adViewBlock.visibility = android.view.View.VISIBLE
+            binding.adViewBlock.loadAd(AdRequest.Builder().build())
+        }
+    }
+
+    // Süre, ebeveyn PIN alanını açmışken dolarsa ekran time_up görünümüne
+    // geçiyor ve telefon yeniden çocuğun eline dönebilir - banner'ı gizle.
+    private fun hideBanner() {
+        if (!bannerShown) return
+        bannerShown = false
+        binding.adViewBlock.pause()
+        binding.adViewBlock.visibility = android.view.View.GONE
     }
 
     private fun setupForMode() {
@@ -124,6 +154,7 @@ class BlockActivity : AppCompatActivity() {
             binding.rvAllowedApps.visibility = android.view.View.GONE
             binding.tvParentToggle.visibility = android.view.View.GONE
             setPinAreaVisible(true)
+            hideBanner()
         } else {
             binding.tvIcon.text = "⏸️"
             binding.tvTitle.text = getString(R.string.blocked_app_title)
@@ -131,10 +162,7 @@ class BlockActivity : AppCompatActivity() {
             setupAllowedAppsList()
             binding.tvParentToggle.visibility = android.view.View.VISIBLE
             setPinAreaVisible(false)
-            binding.tvParentToggle.setOnClickListener {
-                setPinAreaVisible(true)
-                binding.tvParentToggle.visibility = android.view.View.GONE
-            }
+            binding.tvParentToggle.setOnClickListener { revealParentArea() }
         }
     }
 

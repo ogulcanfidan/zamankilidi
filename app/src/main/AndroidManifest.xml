@@ -7,8 +7,16 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- AdMob geçiş reklamını indirebilmek için (yalnızca ebeveyn ekranında
-         kullanılıyor, çocuğun gördüğü kilit ekranında reklam yok). -->
+    <!-- Yeniden başlatmada aktif oturumu KAPATMAK için (bkz. BootReceiver).
+         Kilidi boot'ta geri getirmek için değil, tam tersi: her cihazda
+         garanti bir çıkış yolu bırakmak için. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- AdMob reklamlarını indirebilmek için. Reklamların hepsi ebeveyne
+         yönelik: MainActivity'deki banner, doğru PIN'den sonra gösterilen
+         geçiş reklamı ve kilit ekranında yalnızca "Ebeveyn misiniz?"
+         bağlantısıyla açılan banner. Çocuğun gördüğü "süre doldu" ekranında
+         reklam gösterilmez. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -93,6 +101,17 @@
                 android:resource="@xml/device_admin" />
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Yeniden başlatmada oturumu sonlandırır (emniyet supabı). -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
 
