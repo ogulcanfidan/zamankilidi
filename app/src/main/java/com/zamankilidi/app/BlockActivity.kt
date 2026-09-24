@@ -63,6 +63,10 @@ class BlockActivity : AppCompatActivity() {
     // gösterilmediyse resume/pause/destroy çağırmaya da gerek yok.
     private var bannerShown = false
 
+    // PIN alanı şu an açık mı. Geçiş reklamı isteğinin ne zaman
+    // gönderileceğine bu karar veriyor - bkz. onCreate.
+    private var pinAreaVisible = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBlockBinding.inflate(layoutInflater)
@@ -78,10 +82,19 @@ class BlockActivity : AppCompatActivity() {
         setupPinRow()
 
         MobileAds.initialize(this) {}
-        loadInterstitialAd()
+
+        // Reklam isteğini ancak PIN alanı görünürse gönderiyoruz. time_up
+        // modunda PIN alanı baştan açık (ebeveyn süre dolduğunda doğrudan
+        // girebilsin diye), blocked_app modunda ise yalnızca "Ebeveyn
+        // misiniz?" bağlantısına dokunulunca açılıyor - o yüzden istek de
+        // orada, revealParentArea içinde gönderiliyor. Böylece çocuk ekrana
+        // bakarken arka planda hiç gösterilmeyecek bir reklam çekilmiyor.
+        if (pinAreaVisible) loadInterstitialAd()
     }
 
     private fun loadInterstitialAd() {
+        // Sıklık sınırı yüzünden zaten gösterilmeyecekse istek de atma.
+        if (interstitialAd != null || !SessionManager.canShowInterstitial(this)) return
         val adRequest = AdRequest.Builder().build()
         InterstitialAd.load(
             this,
@@ -116,6 +129,7 @@ class BlockActivity : AppCompatActivity() {
     // pinRow ve "PIN'imi unuttum" linki her zaman birlikte görünür/gizlenir.
     // Banner BİLEREK buraya dahil değil - bkz. companion object'teki kural.
     private fun setPinAreaVisible(visible: Boolean) {
+        pinAreaVisible = visible
         val v = if (visible) android.view.View.VISIBLE else android.view.View.GONE
         binding.pinRow.visibility = v
         binding.tvForgotPin.visibility = v
@@ -128,6 +142,10 @@ class BlockActivity : AppCompatActivity() {
     private fun revealParentArea() {
         setPinAreaVisible(true)
         binding.tvParentToggle.visibility = android.view.View.GONE
+        // Geçiş reklamının isteği de ilk kez burada gönderiliyor. Ebeveyn
+        // PIN'i yazana kadar geçen birkaç saniyede genellikle hazır oluyor;
+        // olmazsa kilit yine anında kalkar, sadece reklam gösterilmez.
+        loadInterstitialAd()
         if (!bannerShown) {
             bannerShown = true
             binding.adViewBlock.visibility = android.view.View.VISIBLE
@@ -185,6 +203,9 @@ class BlockActivity : AppCompatActivity() {
                 // doldu - intent'in modunu güncelleyip time_up görünümüne geçiyoruz.
                 intent.putExtra(EXTRA_MODE, MODE_TIME_UP)
                 setupForMode()
+                // time_up görünümünde PIN alanı açık olduğu için ebeveyn
+                // buradan da kilidi kaldırabilir; reklamı o ana hazırla.
+                loadInterstitialAd()
             }
         }.also { it.start() }
     }
@@ -246,7 +267,7 @@ class BlockActivity : AppCompatActivity() {
                 val selectedIndex = spinner.selectedItemPosition
                 val answer = input.text.toString()
                 if (SessionManager.checkRecoveryAnswer(this, selectedIndex, answer)) {
-                    showInterstitialThenUnlock()
+                    showInterstitialThenUnlock(showAd = false)
                 } else {
                     Toast.makeText(this, getString(R.string.recovery_wrong_answer), Toast.LENGTH_SHORT).show()
                 }
@@ -267,15 +288,20 @@ class BlockActivity : AppCompatActivity() {
     // ekrana geri yönlendiriyordu - yani doğru PIN girilmesine rağmen kilit
     // reklam ekranı tamamen kapanana kadar "çalışmaya" devam ediyormuş gibi
     // görünüyordu. Artık oturum reklamdan ÖNCE bittiği için bu sorun oluşmaz.
-    private fun showInterstitialThenUnlock() {
+    //
+    // showAd = false: kurtarma sorusuyla açılan kilit. Ebeveyn oraya ancak
+    // PIN'ini unuttuğu için gelir; o anda tam ekran reklam göstermek gereksiz
+    // bir eziyet.
+    private fun showInterstitialThenUnlock(showAd: Boolean = true) {
         SessionManager.endSession(this)
         TimerService.stop(this)
 
         val ad = interstitialAd
-        if (ad == null) {
+        if (ad == null || !showAd || !SessionManager.canShowInterstitial(this)) {
             finish()
             return
         }
+        SessionManager.markInterstitialShown(this)
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
             override fun onAdDismissedFullScreenContent() {
                 interstitialAd = null

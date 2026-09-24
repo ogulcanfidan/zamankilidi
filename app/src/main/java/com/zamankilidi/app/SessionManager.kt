@@ -21,6 +21,7 @@ object SessionManager {
     private const val KEY_ALLOWED_APPS = "allowed_apps"
     private const val KEY_SESSION_END_AT = "session_end_at"
     private const val KEY_SESSION_ACTIVE = "session_active"
+    private const val KEY_LAST_INTERSTITIAL_AT = "last_interstitial_at"
 
     private fun prefs(context: Context): SharedPreferences =
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
@@ -148,4 +149,27 @@ object SessionManager {
 
     fun remainingMillis(context: Context): Long =
         (sessionEndAt(context) - System.currentTimeMillis()).coerceAtLeast(0L)
+
+    // ---------- Geçiş reklamı sıklığı ----------
+    // Ebeveyn telefonu sık sık kontrol ediyorsa (kilidi aç, bak, yeniden
+    // kur) her açılışta tam ekran reklam görmesin. Oturumlar arasında da
+    // geçerli olması gerektiği için zaman damgası SharedPreferences'ta
+    // tutuluyor; endSession bunu SİLMEZ.
+
+    private const val INTERSTITIAL_COOLDOWN_MS = 3 * 60_000L
+
+    fun canShowInterstitial(context: Context): Boolean {
+        val last = prefs(context).getLong(KEY_LAST_INTERSTITIAL_AT, 0L)
+        val now = System.currentTimeMillis()
+        // Kullanıcı saati geri alırsa (last > now) sınır kalıcı olarak
+        // kilitlenmesin diye bu durumu da "gösterilebilir" sayıyoruz.
+        if (last > now) return true
+        return now - last >= INTERSTITIAL_COOLDOWN_MS
+    }
+
+    fun markInterstitialShown(context: Context) {
+        prefs(context).edit()
+            .putLong(KEY_LAST_INTERSTITIAL_AT, System.currentTimeMillis())
+            .apply()
+    }
 }
