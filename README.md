@@ -5,7 +5,7 @@ uygulamalara izin vererek ödünç vermesini sağlayan Android uygulaması. Sür
 dolunca ya da çocuk izin verilmeyen bir uygulamayı açmaya çalışınca tam ekran
 bir uyarı devreye giriyor ve sadece ebeveynin PIN'iyle kapanıyor.
 
-Play Store'da yayında. Paket adı `com.zamankilidi.app`, arayüz 9 dilde
+Paket adı `com.zamankilidi.app`, arayüz 9 dilde
 (tr, en, ar, es, fr, hi, in, pt-BR, ru).
 
 ## Nasıl çalışıyor
