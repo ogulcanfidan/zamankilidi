@@ -56,6 +56,12 @@ ekranındaki banner PIN alanı açılmadan yüklenmiyor bile. Bu bağlantı bir 
 kapısı değil — çocuk da dokunabilir. Daha sıkısı gerekirse banner'ı o ekrandan
 tamamen çıkarmak gerekir.
 
+**Uçtan uca ekran elle yönetiliyor.** `targetSdk 36` olduğu için Android 15+
+içeriği sistem çubuklarının altına çiziyor ve temadaki `statusBarColor` /
+`navigationBarColor` ayarlarını yok sayıyor. O iki satır temadan kaldırıldı;
+çubukların kapladığı alan `EdgeToEdge.kt` içinde dolgu olarak ekleniyor ve
+simgeler açık renge zorlanıyor (uygulama her zaman koyu, `values-night` yok).
+
 **Ana ekran da kontrol ediliyor.** Launcher paketi izinli sayılmıyor; oturum
 aktifken ana ekrana dönmek de "izinli mi" kontrolünden geçiyor.
 
@@ -63,11 +69,16 @@ aktifken ana ekrana dönmek de "izinli mi" kontrolünden geçiyor.
 
 Gradle wrapper deposunda yok; Android Studio'da açıp derlemek en kolayı.
 Komut satırından derleyeceksen kendi Gradle kurulumunla (8.7 ile test edildi)
-ve JDK 17 ile:
+ve **JDK 17 ya da 21** ile:
 
 ```bash
-gradle assembleDebug
+JAVA_HOME=~/.jdks/jbr-17.0.14 gradle assembleRelease
 ```
+
+`JAVA_HOME` gerçekten gerekli: Android Studio'nun kendi JBR'si (`Android
+Studio/jbr`) 2026 sürümlerinde Java 25'e yükseldi ve Gradle 8.7 onu
+tanımıyor — `Unsupported class file major version 69` hatası bundan geliyor.
+Gradle'ı da yükseltmediğimiz sürece ayrı bir JDK 17/21 göstermek gerekiyor.
 
 `local.properties` içindeki `sdk.dir` Android SDK yolunu göstermeli.
 
@@ -79,6 +90,14 @@ bu dosya ve `.jks` **depoya girmiyor** (`.gitignore`). Kurulum için
 build imzasız derlenir, hata vermez.
 
 Yeni sürüm çıkarırken `app/build.gradle` içindeki `versionCode` artırılmalı.
+
+Release derlemesinde R8 açık (`minifyEnabled true` + `shrinkResources true`).
+Kurallar `app/proguard-rules.pro` içinde ve neredeyse boş — uygulamada
+yansıma yok, manifest'teki sınıfları R8 zaten koruyor. **R8 hataları yalnızca
+imzalı release derlemesinde ortaya çıkar**, debug derlemesi hiçbir şey
+söylemez; o yüzden her sürümde release APK'yi cihazda bir kez açmak şart.
+Çökme raporlarını çözmek için `app/build/outputs/mapping/release/mapping.txt`
+Play Console'a yüklenmeli.
 
 ## Gizlilik politikası
 

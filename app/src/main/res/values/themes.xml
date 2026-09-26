@@ -4,8 +4,14 @@
         <item name="android:windowBackground">@color/bg</item>
         <item name="colorPrimary">@color/accent</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:statusBarColor">@color/bg</item>
-        <item name="android:navigationBarColor">@color/bg</item>
+        <!--
+            android:statusBarColor ve android:navigationBarColor BİLEREK yok.
+            Android 15 (API 35) bu iki ayarı kullanımdan kaldırdı ve targetSdk
+            35+ uygulamalarda tamamen yok sayıyor; bırakılsalardı Play Console
+            "desteği sonlandırılmış API" uyarısı vermeye devam ederdi.
+            Çubukların yerini artık EdgeToEdge.kt ayarlıyor: renkleri şeffaf,
+            kapladıkları alan da kök görünüme dolgu olarak ekleniyor.
+        -->
     </style>
 
     <style name="Theme.ZamanKilidi.Block" parent="Theme.ZamanKilidi">

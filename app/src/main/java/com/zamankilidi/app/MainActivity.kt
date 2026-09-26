@@ -130,8 +130,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableDarkEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applySystemBarInsets(binding.root)
 
         binding.btnGrantPermissions.setOnClickListener { openPermissionFlow() }
         binding.btnStart.setOnClickListener { onStartClicked() }

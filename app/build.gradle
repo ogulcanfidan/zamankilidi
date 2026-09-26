@@ -28,8 +28,8 @@ android {
         applicationId "com.zamankilidi.app"
         minSdk 26
         targetSdk 36
-        versionCode 8
-        versionName "1.7"
+        versionCode 9
+        versionName "1.8"
     }
 
     signingConfigs {
@@ -45,7 +45,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            // R8: kodu kucultur ve karartir. Play Console "DEX kodu
+            // optimizasyonu esigimizin altinda" uyarisi bunu istiyordu.
+            // DIKKAT: R8 hatalari yalnizca imzali release derlemesinde
+            // ortaya cikar - her surumde release APK'yi cihazda denemek sart.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             if (hasSigningConfig) {
                 signingConfig signingConfigs.release
             }

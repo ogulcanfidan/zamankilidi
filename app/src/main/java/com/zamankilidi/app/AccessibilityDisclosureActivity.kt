@@ -19,8 +19,10 @@ class AccessibilityDisclosureActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableDarkEdgeToEdge()
         binding = ActivityAccessibilityDisclosureBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applySystemBarInsets(binding.root)
 
         binding.btnDisclosureContinue.setOnClickListener {
             setResult(Activity.RESULT_OK)
