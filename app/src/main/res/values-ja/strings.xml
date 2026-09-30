@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <!-- Accessibility service description (shown in Android Settings) -->
+    <string name="accessibility_service_description">セッション中にどのアプリが画面に表示されているかを Paydos が確認し、許可されていないアプリが開かれたときに元の画面へ戻せるようにします。画面の内容は読み取りません。</string>
+
+    <!-- Main screen -->
+    <string name="subtitle_main">時間を選び、許可するアプリを決めて、お子さまにスマホを渡しましょう。</string>
+
+    <string name="permissions_card_title">🔐  最初にいくつかの権限が必要です</string>
+    <string name="permissions_card_body">下のボタンを一度タップするだけで大丈夫です。残りは順番に開きますので、各画面で「許可」または「オン」をタップしてください。</string>
+    <string name="btn_grant_permissions">権限を設定する</string>
+
+    <string name="pin_title_new">🔑  保護者用PINを設定</string>
+    <string name="pin_title_saved">🔑  保護者用PIN（保存済み）</string>
+    <string name="pin_hint_new">4桁のPIN</string>
+    <string name="pin_hint_change">変更するには新しいPINを入力</string>
+    <string name="pin_card_body">時間になる前にロックを解除するには、このPINが必要です。お子さまが知らない番号にしてください。</string>
+    <string name="recovery_answer_label">復旧用の答え（必須）</string>
+    <string name="recovery_answer_hint">PINを忘れたときは、この答えでロックを解除できます。自分には覚えやすく、お子さまが知らない・推測できないものを選んでください（お子さまの生まれ年や名前は避けましょう）。例：初めて飼ったペットの名前、好きだった先生の名字、高校を卒業した街。</string>
+    <string name="recovery_answer_field_hint">復旧用の答え</string>
+    <string name="recovery_answer_label_saved">復旧用の答え（保存済み）</string>
+    <string name="recovery_answer_field_hint_saved">変更する場合は新しい答えを入力（任意）</string>
+    <string name="forgot_pin_link">PINをお忘れですか？</string>
+    <string name="recovery_dialog_title">復旧用の答えを入力</string>
+    <string name="recovery_dialog_positive">確認</string>
+    <string name="recovery_dialog_negative">キャンセル</string>
+    <string name="recovery_wrong_answer">答えが違います。もう一度お試しください</string>
+    <string name="recovery_not_set">このロックには復旧用の答えが設定されていません</string>
+    <string name="toast_recovery_answer_required">PINを忘れても解除できるよう、復旧用の答えも設定してください</string>
+    <string name="recovery_restart_hint">PINも復旧用の答えも忘れてしまいましたか？スマホの電源を切って入れ直すと、ロックが解除されます。</string>
+    <string name="recovery_question_label">復旧用の質問</string>
+    <string-array name="recovery_questions">
+        <item>初めて飼ったペットの名前は？</item>
+        <item>好きだった先生の名字は？</item>
+        <item>高校を卒業した街は？</item>
+        <item>初めての車のメーカーは？</item>
+        <item>子どもの頃の親友の名前は？</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  時間</string>
+    <string name="duration_15">15分</string>
+    <string name="duration_30">30分</string>
+    <string name="duration_60">1時間</string>
+    <string name="duration_custom_label">その他：</string>
+    <string name="duration_custom_hint">分</string>
+
+    <string name="apps_card_title">📱  許可するアプリ</string>
+    <string name="apps_card_body">この時間中にお子さまが開けるアプリにチェックを入れてください。</string>
+    <string name="sort_recent">最近使用</string>
+    <string name="sort_most_used">よく使う</string>
+    <string name="sort_alpha">名前順</string>
+
+    <string name="btn_start_lock">ロックを開始</string>
+    <string name="footer_privacy_note">🔒  設定とPINはこのスマホにのみ保存されます。</string>
+
+    <!-- Lock screen -->
+    <string name="time_up_title">時間になりました</string>
+    <string name="time_up_message">時間になりました。スマホを大人に渡してね。</string>
+    <string name="blocked_app_title">このアプリは今はリストにありません</string>
+    <string name="time_up_recent">ちょうど時間が終わりました。</string>
+    <string name="remaining_time_format">残り時間：%1$02d:%2$02d － 許可されたアプリから選んでね。</string>
+    <string name="parent_toggle">保護者の方ですか？ロックを解除するにはここをタップ</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">ロックを解除</string>
+    <string name="pin_error">PINが違います</string>
+
+    <!-- Toasts / dialog text -->
+    <string name="toast_find_open_app">次の画面で「Paydos」を探して開いてください</string>
+    <string name="device_admin_explanation">ロック中に Paydos を簡単に削除できないようにするために必要です。</string>
+    <string name="toast_usage_access_needed">この並べ替えには、Androidの「使用状況へのアクセス」権限が必要です。次の画面のリストで「Paydos」を探して許可してください。</string>
+    <string name="usage_access_dialog_title">任意の権限がもう1つ</string>
+    <string name="usage_access_dialog_positive">許可</string>
+    <string name="usage_access_dialog_negative">今はしない</string>
+    <string name="permission_intro_title">Paydos を使うにはいくつかの権限が必要です</string>
+    <string name="permission_intro_body">これらがないとロック機能は動作しません：\n\n• ユーザー補助 — どのアプリが開いているかを確認するため\n• デバイス管理者 — ロック中にアプリを削除しにくくするため\n• 通知 — 残り時間をお知らせするため\n\nどの権限も、画面の内容を読み取ったりデータを収集したりすることはありません。</string>
+    <string name="permission_intro_button_wait">わかりました（%1$d）</string>
+    <string name="permission_intro_button_ready">わかりました、続ける</string>
+    <string name="toast_open_permissions_first">先に上の権限をオンにしてください</string>
+    <string name="toast_pick_valid_duration">有効な時間を選んでください</string>
+    <string name="toast_pin_min_length_new">4桁以上のPINを設定してください</string>
+    <string name="toast_pin_min_length_change">新しいPINは4桁以上にしてください</string>
+    <string name="toast_lock_started_format">ロックを開始しました：%1$d分</string>
+
+    <!-- Notification -->
+    <string name="notification_title_active">Paydos が有効です</string>
+    <string name="notification_remaining_format">残り時間：%1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos タイマー</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">ユーザー補助の権限について</string>
+    <string name="accessibility_disclosure_body">Paydos は、ロック中に動作するために Android のユーザー補助の権限を必要とします。続ける前に、この権限の使い道を正確にご説明します：</string>
+    <string name="accessibility_disclosure_point_what">🔍 何をするか：ロック中、画面でどのアプリが開いているかを確認します。</string>
+    <string name="accessibility_disclosure_point_why">↩️ なぜ必要か：許可されていないアプリが開かれた場合、自動的にロック画面へ戻します。</string>
+    <string name="accessibility_disclosure_point_data">🔒 しないこと：画面上の文字やパスワードなどの内容は一切読み取らず、データがスマホの外に出ることもありません。</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ ご注意：次の画面で、Android が赤い「危険」の警告を表示することがあります。これはこの権限を求めるすべてのアプリに表示されるシステム標準のメッセージで、Paydos 固有のものではありません。</string>
+    <string name="btn_disclosure_continue">了解して続ける</string>
+    <string name="btn_disclosure_cancel">今はしない</string>
+</resources>

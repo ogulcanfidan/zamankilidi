@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <!-- Accessibility service description (shown in Android Settings) -->
+    <string name="accessibility_service_description">Permette a Paydos di vedere quale app è sullo schermo mentre una sessione è attiva e di tornare indietro quando viene aperta un’app non consentita. Non legge il contenuto dello schermo.</string>
+
+    <!-- Main screen -->
+    <string name="subtitle_main">Scegli la durata, seleziona le app consentite e dai il telefono a tuo figlio.</string>
+
+    <string name="permissions_card_title">🔐  Prima servono alcune autorizzazioni</string>
+    <string name="permissions_card_body">Basta un tocco sul pulsante qui sotto: apro io il resto in ordine, tu tocca solo “Consenti”/“Attiva” in ogni schermata.</string>
+    <string name="btn_grant_permissions">Configura le autorizzazioni</string>
+
+    <string name="pin_title_new">🔑  Imposta un PIN genitore</string>
+    <string name="pin_title_saved">🔑  PIN genitore (salvato)</string>
+    <string name="pin_hint_new">PIN di 4 cifre</string>
+    <string name="pin_hint_change">Inserisci un nuovo PIN per cambiarlo</string>
+    <string name="pin_card_body">Ti servirà questo PIN per terminare il blocco prima dello scadere del tempo. Scegli qualcosa che tuo figlio non conosce.</string>
+    <string name="recovery_answer_label">Risposta di recupero (obbligatoria)</string>
+    <string name="recovery_answer_hint">Se dimentichi il PIN, questa risposta sblocca al suo posto. Scegli qualcosa di facile da ricordare per te ma che tuo figlio non conosca o non possa indovinare: non il suo anno di nascita o il suo nome. Per esempio: il nome del tuo primo animale domestico, il cognome del tuo insegnante preferito o la città in cui hai finito le superiori.</string>
+    <string name="recovery_answer_field_hint">La tua risposta di recupero</string>
+    <string name="recovery_answer_label_saved">Risposta di recupero (salvata)</string>
+    <string name="recovery_answer_field_hint_saved">Inseriscine una nuova per cambiarla (facoltativo)</string>
+    <string name="forgot_pin_link">Hai dimenticato il PIN?</string>
+    <string name="recovery_dialog_title">Inserisci la risposta di recupero</string>
+    <string name="recovery_dialog_positive">Verifica</string>
+    <string name="recovery_dialog_negative">Annulla</string>
+    <string name="recovery_wrong_answer">La risposta non è corretta, riprova</string>
+    <string name="recovery_not_set">Per questo blocco non è stata impostata una risposta di recupero</string>
+    <string name="toast_recovery_answer_required">Imposta anche una risposta di recupero, così potrai sbloccare se dimentichi il PIN</string>
+    <string name="recovery_restart_hint">Hai dimenticato sia il PIN sia la risposta di recupero? Spegnere e riaccendere il telefono rimuove il blocco.</string>
+    <string name="recovery_question_label">Domanda di recupero</string>
+    <string-array name="recovery_questions">
+        <item>Come si chiamava il tuo primo animale domestico?</item>
+        <item>Qual è il cognome del tuo insegnante preferito?</item>
+        <item>In quale città hai finito le superiori?</item>
+        <item>Di che marca era la tua prima auto?</item>
+        <item>Come si chiamava il tuo migliore amico d’infanzia?</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  Durata</string>
+    <string name="duration_15">15 min</string>
+    <string name="duration_30">30 min</string>
+    <string name="duration_60">1 ora</string>
+    <string name="duration_custom_label">Altro:</string>
+    <string name="duration_custom_hint">min</string>
+
+    <string name="apps_card_title">📱  App consentite</string>
+    <string name="apps_card_body">Seleziona le app che tuo figlio può aprire in questo periodo.</string>
+    <string name="sort_recent">Usate di recente</string>
+    <string name="sort_most_used">Più usate</string>
+    <string name="sort_alpha">A-Z</string>
+
+    <string name="btn_start_lock">Avvia il blocco</string>
+    <string name="footer_privacy_note">🔒  Le impostazioni e il PIN sono salvati solo su questo telefono.</string>
+
+    <!-- Lock screen -->
+    <string name="time_up_title">Tempo scaduto</string>
+    <string name="time_up_message">Il tuo tempo è finito: puoi dare il telefono a un adulto.</string>
+    <string name="blocked_app_title">Questa app non è nell’elenco in questo momento</string>
+    <string name="time_up_recent">Il tempo è appena scaduto.</string>
+    <string name="remaining_time_format">Tempo rimasto: %1$02d:%2$02d - scegli una delle app consentite.</string>
+    <string name="parent_toggle">Sei un adulto? Tocca qui per terminare il blocco</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Termina il blocco</string>
+    <string name="pin_error">PIN errato</string>
+
+    <!-- Toasts / dialog text -->
+    <string name="toast_find_open_app">Trova e apri “Paydos” nella schermata che si apre</string>
+    <string name="device_admin_explanation">Serve affinché Paydos non possa essere rimosso facilmente durante una sessione bloccata.</string>
+    <string name="toast_usage_access_needed">Questo ordinamento richiede l’autorizzazione Android “Accesso ai dati di utilizzo”. Nella schermata che si apre, trova “Paydos” nell’elenco e consenti l’accesso.</string>
+    <string name="usage_access_dialog_title">Un’altra autorizzazione facoltativa</string>
+    <string name="usage_access_dialog_positive">Consenti</string>
+    <string name="usage_access_dialog_negative">Non ora</string>
+    <string name="permission_intro_title">Paydos ha bisogno di alcune autorizzazioni per funzionare</string>
+    <string name="permission_intro_body">Senza queste, il blocco non funziona:\n\n• Accessibilità — per vedere quale app è aperta\n• Amministratore del dispositivo — per rendere più difficile rimuovere l’app durante il blocco\n• Notifiche — per dirti quanto tempo resta\n\nNessuna legge lo schermo né raccoglie dati.</string>
+    <string name="permission_intro_button_wait">Ho capito (%1$d)</string>
+    <string name="permission_intro_button_ready">Ho capito, continua</string>
+    <string name="toast_open_permissions_first">Attiva prima le autorizzazioni qui sopra</string>
+    <string name="toast_pick_valid_duration">Scegli una durata valida</string>
+    <string name="toast_pin_min_length_new">Imposta un PIN di almeno 4 cifre</string>
+    <string name="toast_pin_min_length_change">Il nuovo PIN deve avere almeno 4 cifre</string>
+    <string name="toast_lock_started_format">Blocco avviato: %1$d min</string>
+
+    <!-- Notification -->
+    <string name="notification_title_active">Paydos è attivo</string>
+    <string name="notification_remaining_format">Tempo rimasto: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Timer di Paydos</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">Informazioni sull’autorizzazione Accessibilità</string>
+    <string name="accessibility_disclosure_body">Paydos ha bisogno dell’autorizzazione Accessibilità di Android per funzionare mentre una sessione di blocco è attiva. Prima di continuare, ecco esattamente a cosa serve:</string>
+    <string name="accessibility_disclosure_point_what">🔍 Cosa fa: mentre il blocco è attivo, controlla quale app è aperta sullo schermo.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Perché serve: se viene aperta un’app non consentita, ti riporta automaticamente alla schermata di blocco.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Cosa non fa: non legge il testo sullo schermo, le password né altri contenuti, e nessun dato lascia mai il telefono.</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Attenzione: nella schermata successiva Android potrebbe mostrare un avviso rosso di “Pericolo”. È un messaggio standard di sistema mostrato per ogni app che richiede questa autorizzazione, non qualcosa di specifico di Paydos.</string>
+    <string name="btn_disclosure_continue">Ho capito, continua</string>
+    <string name="btn_disclosure_cancel">Non ora</string>
+</resources>

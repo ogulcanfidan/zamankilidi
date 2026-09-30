@@ -5,8 +5,10 @@ uygulamalara izin vererek ödünç vermesini sağlayan Android uygulaması. Sür
 dolunca ya da çocuk izin verilmeyen bir uygulamayı açmaya çalışınca tam ekran
 bir uyarı devreye giriyor ve sadece ebeveynin PIN'iyle kapanıyor.
 
-Paket adı `com.zamankilidi.app`, arayüz 9 dilde
-(tr, en, ar, es, fr, hi, in, pt-BR, ru).
+Paket adı `com.zamankilidi.app`, arayüz 14 dilde
+(tr, en, ar, de, es, fr, hi, in, it, ja, ko, pt, ru, zh). Varsayılan dil
+(`values/`) İngilizce; listede olmayan bir dildeki telefonda uygulama
+İngilizce açılır.
 
 ## Nasıl çalışıyor
 
@@ -101,6 +103,6 @@ Play Console'a yüklenmeli.
 
 ## Gizlilik politikası
 
-https://fmjapps.github.io/privacy/paydos/ — kaynağı `fmjapps/privacy`
+https://fmjapps.com/privacy/paydos/ — kaynağı `fmjapps/privacy`
 deposunda `paydos/index.html`. İzin listesi değişirse politika da
 güncellenmeli.

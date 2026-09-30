@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <!-- Accessibility service description (shown in Android Settings) -->
+    <string name="accessibility_service_description">Damit kann Paydos während einer aktiven Sitzung erkennen, welche App geöffnet ist, und zurückleiten, wenn eine nicht erlaubte App geöffnet wird. Bildschirminhalte werden nicht gelesen.</string>
+
+    <!-- Main screen -->
+    <string name="subtitle_main">Dauer wählen, erlaubte Apps festlegen, Handy dem Kind geben.</string>
+
+    <string name="permissions_card_title">🔐  Zuerst ein paar Berechtigungen</string>
+    <string name="permissions_card_body">Ein Tipp auf die Schaltfläche unten genügt – ich öffne den Rest der Reihe nach, du tippst auf jedem Bildschirm nur auf „Zulassen“/„Aktivieren“.</string>
+    <string name="btn_grant_permissions">Berechtigungen einrichten</string>
+
+    <string name="pin_title_new">🔑  Eltern-PIN festlegen</string>
+    <string name="pin_title_saved">🔑  Eltern-PIN (gespeichert)</string>
+    <string name="pin_hint_new">4-stellige PIN</string>
+    <string name="pin_hint_change">Neue PIN eingeben, um sie zu ändern</string>
+    <string name="pin_card_body">Mit dieser PIN beendest du die Sperre vor Ablauf der Zeit. Wähle etwas, das dein Kind nicht kennt.</string>
+    <string name="recovery_answer_label">Wiederherstellungsantwort (erforderlich)</string>
+    <string name="recovery_answer_hint">Falls du deine PIN vergisst, entsperrst du damit. Wähle etwas, das du dir leicht merken kannst, das dein Kind aber weder kennt noch errät – nicht sein Geburtsjahr oder seinen Namen. Zum Beispiel: der Name deines ersten Haustiers, der Nachname deines Lieblingslehrers oder die Stadt, in der du deinen Schulabschluss gemacht hast.</string>
+    <string name="recovery_answer_field_hint">Deine Wiederherstellungsantwort</string>
+    <string name="recovery_answer_label_saved">Wiederherstellungsantwort (gespeichert)</string>
+    <string name="recovery_answer_field_hint_saved">Neue eingeben, um sie zu ändern (optional)</string>
+    <string name="forgot_pin_link">PIN vergessen?</string>
+    <string name="recovery_dialog_title">Wiederherstellungsantwort eingeben</string>
+    <string name="recovery_dialog_positive">Bestätigen</string>
+    <string name="recovery_dialog_negative">Abbrechen</string>
+    <string name="recovery_wrong_answer">Die Antwort stimmt nicht, versuch es noch einmal</string>
+    <string name="recovery_not_set">Für diese Sperre wurde keine Wiederherstellungsantwort festgelegt</string>
+    <string name="toast_recovery_answer_required">Lege auch eine Wiederherstellungsantwort fest, damit du entsperren kannst, falls du die PIN vergisst</string>
+    <string name="recovery_restart_hint">PIN und Wiederherstellungsantwort vergessen? Ein Neustart des Handys hebt die Sperre auf.</string>
+    <string name="recovery_question_label">Sicherheitsfrage</string>
+    <string-array name="recovery_questions">
+        <item>Wie hieß dein erstes Haustier?</item>
+        <item>Wie lautet der Nachname deines Lieblingslehrers?</item>
+        <item>In welcher Stadt hast du deinen Schulabschluss gemacht?</item>
+        <item>Welche Marke hatte dein erstes Auto?</item>
+        <item>Wie hieß dein bester Freund in der Kindheit?</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  Dauer</string>
+    <string name="duration_15">15 Min.</string>
+    <string name="duration_30">30 Min.</string>
+    <string name="duration_60">1 Std.</string>
+    <string name="duration_custom_label">Andere:</string>
+    <string name="duration_custom_hint">Min.</string>
+
+    <string name="apps_card_title">📱  Erlaubte Apps</string>
+    <string name="apps_card_body">Markiere die Apps, die dein Kind in dieser Zeit öffnen darf.</string>
+    <string name="sort_recent">Zuletzt verwendet</string>
+    <string name="sort_most_used">Meistgenutzt</string>
+    <string name="sort_alpha">A–Z</string>
+
+    <string name="btn_start_lock">Sperre starten</string>
+    <string name="footer_privacy_note">🔒  Deine Einstellungen und deine PIN werden nur auf diesem Handy gespeichert.</string>
+
+    <!-- Lock screen -->
+    <string name="time_up_title">Die Zeit ist um</string>
+    <string name="time_up_message">Deine Zeit ist um – du kannst das Handy einem Erwachsenen geben.</string>
+    <string name="blocked_app_title">Diese App steht gerade nicht auf der Liste</string>
+    <string name="time_up_recent">Die Zeit ist gerade abgelaufen.</string>
+    <string name="remaining_time_format">Verbleibende Zeit: %1$02d:%2$02d – wähle eine der erlaubten Apps.</string>
+    <string name="parent_toggle">Bist du ein Erwachsener? Tippe hier, um die Sperre zu beenden</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">Sperre beenden</string>
+    <string name="pin_error">Falsche PIN</string>
+
+    <!-- Toasts / dialog text -->
+    <string name="toast_find_open_app">Suche auf dem folgenden Bildschirm „Paydos“ und öffne es</string>
+    <string name="device_admin_explanation">Erforderlich, damit Paydos während einer gesperrten Sitzung nicht einfach entfernt werden kann.</string>
+    <string name="toast_usage_access_needed">Diese Sortierung benötigt die Android-Berechtigung „Nutzungsdatenzugriff“. Suche auf dem folgenden Bildschirm „Paydos“ in der Liste und erlaube den Zugriff.</string>
+    <string name="usage_access_dialog_title">Noch eine optionale Berechtigung</string>
+    <string name="usage_access_dialog_positive">Zulassen</string>
+    <string name="usage_access_dialog_negative">Nicht jetzt</string>
+    <string name="permission_intro_title">Paydos braucht ein paar Berechtigungen</string>
+    <string name="permission_intro_body">Ohne diese funktioniert die Sperre nicht:\n\n• Bedienungshilfen – um zu sehen, welche App geöffnet ist\n• Geräteadministrator – damit die App während der Sperre schwerer zu entfernen ist\n• Benachrichtigungen – um dir die verbleibende Zeit anzuzeigen\n\nKeine davon liest deinen Bildschirm oder sammelt Daten.</string>
+    <string name="permission_intro_button_wait">Verstanden (%1$d)</string>
+    <string name="permission_intro_button_ready">Verstanden, weiter</string>
+    <string name="toast_open_permissions_first">Aktiviere zuerst die Berechtigungen oben</string>
+    <string name="toast_pick_valid_duration">Wähle eine gültige Dauer</string>
+    <string name="toast_pin_min_length_new">Lege eine PIN mit mindestens 4 Ziffern fest</string>
+    <string name="toast_pin_min_length_change">Die neue PIN muss mindestens 4 Ziffern haben</string>
+    <string name="toast_lock_started_format">Sperre gestartet: %1$d Min.</string>
+
+    <!-- Notification -->
+    <string name="notification_title_active">Paydos ist aktiv</string>
+    <string name="notification_remaining_format">Verbleibende Zeit: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos-Timer</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">Zur Berechtigung „Bedienungshilfen“</string>
+    <string name="accessibility_disclosure_body">Paydos benötigt die Android-Berechtigung „Bedienungshilfen“, um während einer aktiven Sperre zu funktionieren. Bevor du fortfährst, hier genau, wofür sie dient:</string>
+    <string name="accessibility_disclosure_point_what">🔍 Was sie tut: Während die Sperre aktiv ist, prüft sie, welche App auf dem Bildschirm geöffnet ist.</string>
+    <string name="accessibility_disclosure_point_why">↩️ Warum sie nötig ist: Wird eine nicht erlaubte App geöffnet, geht es automatisch zurück zum Sperrbildschirm.</string>
+    <string name="accessibility_disclosure_point_data">🔒 Was sie nicht tut: Sie liest weder Bildschirmtext noch Passwörter oder andere Inhalte, und keine Daten verlassen dein Handy.</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ Hinweis: Auf dem nächsten Bildschirm zeigt Android möglicherweise eine rote Warnung („Gefahr“) an. Das ist eine Standardmeldung des Systems für jede App, die diese Berechtigung anfordert – nichts, was speziell Paydos betrifft.</string>
+    <string name="btn_disclosure_continue">Verstanden, weiter</string>
+    <string name="btn_disclosure_cancel">Nicht jetzt</string>
+</resources>

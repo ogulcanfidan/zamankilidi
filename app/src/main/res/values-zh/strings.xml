@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <!-- Accessibility service description (shown in Android Settings) -->
+    <string name="accessibility_service_description">让 Paydos 在会话进行期间查看屏幕上正在使用哪个应用，并在打开未允许的应用时返回。它不会读取屏幕内容。</string>
+
+    <!-- Main screen -->
+    <string name="subtitle_main">选择时长，勾选允许的应用，然后把手机交给孩子。</string>
+
+    <string name="permissions_card_title">🔐  首先需要几项权限</string>
+    <string name="permissions_card_body">点一下下面的按钮就行，其余的我会依次打开，你只需在每个页面点“允许”/“开启”。</string>
+    <string name="btn_grant_permissions">设置权限</string>
+
+    <string name="pin_title_new">🔑  设置家长 PIN 码</string>
+    <string name="pin_title_saved">🔑  家长 PIN 码（已保存）</string>
+    <string name="pin_hint_new">4 位 PIN 码</string>
+    <string name="pin_hint_change">输入新的 PIN 码即可更改</string>
+    <string name="pin_card_body">在时间结束前解除锁定需要用到这个 PIN 码。请选一个孩子不知道的。</string>
+    <string name="recovery_answer_label">恢复答案（必填）</string>
+    <string name="recovery_answer_hint">如果忘记 PIN 码，可以用它来解锁。请选一个你容易记住、但孩子不知道也猜不到的答案——不要用孩子的出生年份或名字。例如：你第一只宠物的名字、你最喜欢的老师的姓氏，或你高中毕业所在的城市。</string>
+    <string name="recovery_answer_field_hint">你的恢复答案</string>
+    <string name="recovery_answer_label_saved">恢复答案（已保存）</string>
+    <string name="recovery_answer_field_hint_saved">输入新的答案即可更改（可选）</string>
+    <string name="forgot_pin_link">忘记 PIN 码？</string>
+    <string name="recovery_dialog_title">输入你的恢复答案</string>
+    <string name="recovery_dialog_positive">验证</string>
+    <string name="recovery_dialog_negative">取消</string>
+    <string name="recovery_wrong_answer">答案不正确，请重试</string>
+    <string name="recovery_not_set">此锁定未设置恢复答案</string>
+    <string name="toast_recovery_answer_required">请同时设置恢复答案，这样忘记 PIN 码时也能解锁</string>
+    <string name="recovery_restart_hint">PIN 码和恢复答案都忘了？将手机关机再开机即可解除锁定。</string>
+    <string name="recovery_question_label">恢复问题</string>
+    <string-array name="recovery_questions">
+        <item>你第一只宠物叫什么名字？</item>
+        <item>你最喜欢的老师姓什么？</item>
+        <item>你在哪个城市读完高中？</item>
+        <item>你的第一辆车是什么品牌？</item>
+        <item>你童年最好的朋友叫什么名字？</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  时长</string>
+    <string name="duration_15">15 分钟</string>
+    <string name="duration_30">30 分钟</string>
+    <string name="duration_60">1 小时</string>
+    <string name="duration_custom_label">其他：</string>
+    <string name="duration_custom_hint">分钟</string>
+
+    <string name="apps_card_title">📱  允许的应用</string>
+    <string name="apps_card_body">勾选孩子在这段时间内可以打开的应用。</string>
+    <string name="sort_recent">最近使用</string>
+    <string name="sort_most_used">最常使用</string>
+    <string name="sort_alpha">按名称</string>
+
+    <string name="btn_start_lock">开始锁定</string>
+    <string name="footer_privacy_note">🔒  你的设置和 PIN 码只保存在这部手机上。</string>
+
+    <!-- Lock screen -->
+    <string name="time_up_title">时间到了</string>
+    <string name="time_up_message">时间到啦，可以把手机交给大人了。</string>
+    <string name="blocked_app_title">这个应用现在不在列表里</string>
+    <string name="time_up_recent">时间刚刚用完。</string>
+    <string name="remaining_time_format">剩余时间：%1$02d:%2$02d - 请从允许的应用中选择。</string>
+    <string name="parent_toggle">你是家长吗？点这里解除锁定</string>
+    <string name="pin_hint_short">PIN 码</string>
+    <string name="btn_unlock">解除锁定</string>
+    <string name="pin_error">PIN 码错误</string>
+
+    <!-- Toasts / dialog text -->
+    <string name="toast_find_open_app">在打开的页面中找到并打开“Paydos”</string>
+    <string name="device_admin_explanation">用于防止在锁定期间轻易卸载 Paydos。</string>
+    <string name="toast_usage_access_needed">此排序方式需要 Android 的“使用情况访问权限”。请在打开的页面列表中找到“Paydos”并允许。</string>
+    <string name="usage_access_dialog_title">还有一项可选权限</string>
+    <string name="usage_access_dialog_positive">允许</string>
+    <string name="usage_access_dialog_negative">暂不</string>
+    <string name="permission_intro_title">Paydos 需要几项权限才能工作</string>
+    <string name="permission_intro_body">没有这些权限，锁定功能将无法使用：\n\n• 无障碍 — 用于查看正在使用哪个应用\n• 设备管理员 — 让应用在锁定期间更难被卸载\n• 通知 — 用于告诉你还剩多少时间\n\n这些权限都不会读取你的屏幕或收集数据。</string>
+    <string name="permission_intro_button_wait">知道了 (%1$d)</string>
+    <string name="permission_intro_button_ready">知道了，继续</string>
+    <string name="toast_open_permissions_first">请先开启上面的权限</string>
+    <string name="toast_pick_valid_duration">请选择有效的时长</string>
+    <string name="toast_pin_min_length_new">请设置至少 4 位的 PIN 码</string>
+    <string name="toast_pin_min_length_change">新的 PIN 码至少需要 4 位</string>
+    <string name="toast_lock_started_format">锁定已开始：%1$d 分钟</string>
+
+    <!-- Notification -->
+    <string name="notification_title_active">Paydos 正在运行</string>
+    <string name="notification_remaining_format">剩余时间：%1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos 计时器</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">关于无障碍权限</string>
+    <string name="accessibility_disclosure_body">Paydos 需要 Android 的无障碍权限，才能在锁定期间正常工作。继续之前，先说明它的具体用途：</string>
+    <string name="accessibility_disclosure_point_what">🔍 它做什么：锁定期间，检查屏幕上打开的是哪个应用。</string>
+    <string name="accessibility_disclosure_point_why">↩️ 为什么需要：如果打开了未允许的应用，会自动把你带回锁定页面。</string>
+    <string name="accessibility_disclosure_point_data">🔒 它不做什么：不会读取屏幕上的文字、密码或任何其他内容，任何数据都不会离开你的手机。</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ 提示：在下一个页面，Android 可能会显示红色的“危险”警告。这是系统对所有申请此权限的应用都会显示的标准提示，并非 Paydos 特有。</string>
+    <string name="btn_disclosure_continue">明白了，继续</string>
+    <string name="btn_disclosure_cancel">暂不</string>
+</resources>

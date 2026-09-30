@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <string name="app_name">Paydos</string>
+    <string name="app_title_header">⏳ Paydos</string>
+
+    <!-- Accessibility service description (shown in Android Settings) -->
+    <string name="accessibility_service_description">세션이 진행되는 동안 Paydos가 화면에 어떤 앱이 열려 있는지 확인하고, 허용되지 않은 앱이 열리면 되돌려 보낼 수 있게 합니다. 화면 내용은 읽지 않습니다.</string>
+
+    <!-- Main screen -->
+    <string name="subtitle_main">시간을 정하고, 허용할 앱을 고른 뒤, 아이에게 휴대폰을 건네주세요.</string>
+
+    <string name="permissions_card_title">🔐  먼저 몇 가지 권한이 필요해요</string>
+    <string name="permissions_card_body">아래 버튼을 한 번만 누르면 됩니다. 나머지는 순서대로 열어 드리니, 각 화면에서 “허용”/“사용”만 눌러 주세요.</string>
+    <string name="btn_grant_permissions">권한 설정하기</string>
+
+    <string name="pin_title_new">🔑  부모 PIN 설정</string>
+    <string name="pin_title_saved">🔑  부모 PIN (저장됨)</string>
+    <string name="pin_hint_new">4자리 PIN</string>
+    <string name="pin_hint_change">변경하려면 새 PIN을 입력하세요</string>
+    <string name="pin_card_body">시간이 끝나기 전에 잠금을 해제하려면 이 PIN이 필요합니다. 아이가 모르는 번호로 정하세요.</string>
+    <string name="recovery_answer_label">복구 답변 (필수)</string>
+    <string name="recovery_answer_hint">PIN을 잊어버리면 이 답변으로 잠금을 해제할 수 있습니다. 본인은 쉽게 기억하지만 아이가 모르거나 짐작할 수 없는 것으로 정하세요. 아이의 출생 연도나 이름은 피하세요. 예: 첫 반려동물의 이름, 가장 좋아했던 선생님의 성, 고등학교를 졸업한 도시.</string>
+    <string name="recovery_answer_field_hint">복구 답변 입력</string>
+    <string name="recovery_answer_label_saved">복구 답변 (저장됨)</string>
+    <string name="recovery_answer_field_hint_saved">변경하려면 새 답변을 입력하세요 (선택)</string>
+    <string name="forgot_pin_link">PIN을 잊으셨나요?</string>
+    <string name="recovery_dialog_title">복구 답변을 입력하세요</string>
+    <string name="recovery_dialog_positive">확인</string>
+    <string name="recovery_dialog_negative">취소</string>
+    <string name="recovery_wrong_answer">답변이 올바르지 않습니다. 다시 시도해 주세요</string>
+    <string name="recovery_not_set">이 잠금에는 복구 답변이 설정되어 있지 않습니다</string>
+    <string name="toast_recovery_answer_required">PIN을 잊어도 잠금을 해제할 수 있도록 복구 답변도 설정해 주세요</string>
+    <string name="recovery_restart_hint">PIN과 복구 답변을 모두 잊으셨나요? 휴대폰을 껐다가 다시 켜면 잠금이 해제됩니다.</string>
+    <string name="recovery_question_label">복구 질문</string>
+    <string-array name="recovery_questions">
+        <item>첫 반려동물의 이름은 무엇이었나요?</item>
+        <item>가장 좋아했던 선생님의 성은 무엇인가요?</item>
+        <item>고등학교를 졸업한 도시는 어디인가요?</item>
+        <item>첫 자동차의 브랜드는 무엇이었나요?</item>
+        <item>어린 시절 가장 친한 친구의 이름은 무엇이었나요?</item>
+    </string-array>
+
+    <string name="duration_card_title">⏱️  시간</string>
+    <string name="duration_15">15분</string>
+    <string name="duration_30">30분</string>
+    <string name="duration_60">1시간</string>
+    <string name="duration_custom_label">기타:</string>
+    <string name="duration_custom_hint">분</string>
+
+    <string name="apps_card_title">📱  허용할 앱</string>
+    <string name="apps_card_body">이 시간 동안 아이가 열 수 있는 앱을 선택하세요.</string>
+    <string name="sort_recent">최근 사용</string>
+    <string name="sort_most_used">가장 많이 사용</string>
+    <string name="sort_alpha">이름순</string>
+
+    <string name="btn_start_lock">잠금 시작</string>
+    <string name="footer_privacy_note">🔒  설정과 PIN은 이 휴대폰에만 저장됩니다.</string>
+
+    <!-- Lock screen -->
+    <string name="time_up_title">시간이 끝났어요</string>
+    <string name="time_up_message">시간이 다 됐어요. 이제 휴대폰을 어른에게 주세요.</string>
+    <string name="blocked_app_title">이 앱은 지금 목록에 없어요</string>
+    <string name="time_up_recent">방금 시간이 끝났어요.</string>
+    <string name="remaining_time_format">남은 시간: %1$02d:%2$02d - 허용된 앱 중에서 골라 보세요.</string>
+    <string name="parent_toggle">보호자이신가요? 잠금을 해제하려면 여기를 누르세요</string>
+    <string name="pin_hint_short">PIN</string>
+    <string name="btn_unlock">잠금 해제</string>
+    <string name="pin_error">PIN이 틀렸습니다</string>
+
+    <!-- Toasts / dialog text -->
+    <string name="toast_find_open_app">열리는 화면에서 “Paydos”를 찾아 열어 주세요</string>
+    <string name="device_admin_explanation">세션이 잠겨 있는 동안 Paydos를 쉽게 삭제할 수 없도록 하기 위해 필요합니다.</string>
+    <string name="toast_usage_access_needed">이 정렬 옵션은 Android의 “사용 기록 액세스” 권한이 필요합니다. 열리는 화면의 목록에서 “Paydos”를 찾아 허용해 주세요.</string>
+    <string name="usage_access_dialog_title">선택 권한이 하나 더 있어요</string>
+    <string name="usage_access_dialog_positive">허용</string>
+    <string name="usage_access_dialog_negative">나중에</string>
+    <string name="permission_intro_title">Paydos가 작동하려면 몇 가지 권한이 필요합니다</string>
+    <string name="permission_intro_body">이 권한들이 없으면 잠금 기능이 작동하지 않습니다:\n\n• 접근성 — 어떤 앱이 열려 있는지 확인하기 위해\n• 기기 관리자 — 잠금 중에 앱을 삭제하기 어렵게 하기 위해\n• 알림 — 남은 시간을 알려 드리기 위해\n\n어떤 권한도 화면을 읽거나 데이터를 수집하지 않습니다.</string>
+    <string name="permission_intro_button_wait">알겠어요 (%1$d)</string>
+    <string name="permission_intro_button_ready">알겠어요, 계속</string>
+    <string name="toast_open_permissions_first">먼저 위의 권한을 켜 주세요</string>
+    <string name="toast_pick_valid_duration">올바른 시간을 선택하세요</string>
+    <string name="toast_pin_min_length_new">4자리 이상의 PIN을 설정하세요</string>
+    <string name="toast_pin_min_length_change">새 PIN은 4자리 이상이어야 합니다</string>
+    <string name="toast_lock_started_format">잠금 시작: %1$d분</string>
+
+    <!-- Notification -->
+    <string name="notification_title_active">Paydos 사용 중</string>
+    <string name="notification_remaining_format">남은 시간: %1$02d:%2$02d</string>
+    <string name="notification_channel_name">Paydos 타이머</string>
+
+    <!-- Accessibility permission disclosure screen -->
+    <string name="accessibility_disclosure_title">접근성 권한 안내</string>
+    <string name="accessibility_disclosure_body">Paydos는 잠금 세션이 진행되는 동안 작동하기 위해 Android의 접근성 권한이 필요합니다. 계속하기 전에, 이 권한이 정확히 무엇에 쓰이는지 알려 드립니다:</string>
+    <string name="accessibility_disclosure_point_what">🔍 하는 일: 잠금이 켜져 있는 동안 화면에 어떤 앱이 열려 있는지 확인합니다.</string>
+    <string name="accessibility_disclosure_point_why">↩️ 필요한 이유: 허용되지 않은 앱이 열리면 자동으로 잠금 화면으로 되돌려 보냅니다.</string>
+    <string name="accessibility_disclosure_point_data">🔒 하지 않는 일: 화면의 글자, 비밀번호 등 어떤 내용도 읽지 않으며, 어떤 데이터도 휴대폰 밖으로 나가지 않습니다.</string>
+    <string name="accessibility_disclosure_point_warning">⚠️ 참고: 다음 화면에서 Android가 빨간색 “위험” 경고를 표시할 수 있습니다. 이는 이 권한을 요청하는 모든 앱에 표시되는 표준 시스템 메시지이며, Paydos에만 해당하는 것이 아닙니다.</string>
+    <string name="btn_disclosure_continue">이해했어요, 계속</string>
+    <string name="btn_disclosure_cancel">나중에</string>
+</resources>
