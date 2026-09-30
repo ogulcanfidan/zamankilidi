@@ -17,13 +17,13 @@
     <string name="pin_title_new">🔑  Imposta un PIN genitore</string>
     <string name="pin_title_saved">🔑  PIN genitore (salvato)</string>
     <string name="pin_hint_new">PIN di 4 cifre</string>
-    <string name="pin_hint_change">Inserisci un nuovo PIN per cambiarlo</string>
+    <string name="pin_hint_change">Nuovo PIN per cambiarlo</string>
     <string name="pin_card_body">Ti servirà questo PIN per terminare il blocco prima dello scadere del tempo. Scegli qualcosa che tuo figlio non conosce.</string>
     <string name="recovery_answer_label">Risposta di recupero (obbligatoria)</string>
     <string name="recovery_answer_hint">Se dimentichi il PIN, questa risposta sblocca al suo posto. Scegli qualcosa di facile da ricordare per te ma che tuo figlio non conosca o non possa indovinare: non il suo anno di nascita o il suo nome. Per esempio: il nome del tuo primo animale domestico, il cognome del tuo insegnante preferito o la città in cui hai finito le superiori.</string>
     <string name="recovery_answer_field_hint">La tua risposta di recupero</string>
     <string name="recovery_answer_label_saved">Risposta di recupero (salvata)</string>
-    <string name="recovery_answer_field_hint_saved">Inseriscine una nuova per cambiarla (facoltativo)</string>
+    <string name="recovery_answer_field_hint_saved">Nuova risposta (opzionale)</string>
     <string name="forgot_pin_link">Hai dimenticato il PIN?</string>
     <string name="recovery_dialog_title">Inserisci la risposta di recupero</string>
     <string name="recovery_dialog_positive">Verifica</string>

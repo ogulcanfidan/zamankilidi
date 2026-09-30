@@ -23,7 +23,7 @@
     <string name="recovery_answer_hint">PINを忘れたときは、この答えでロックを解除できます。自分には覚えやすく、お子さまが知らない・推測できないものを選んでください（お子さまの生まれ年や名前は避けましょう）。例：初めて飼ったペットの名前、好きだった先生の名字、高校を卒業した街。</string>
     <string name="recovery_answer_field_hint">復旧用の答え</string>
     <string name="recovery_answer_label_saved">復旧用の答え（保存済み）</string>
-    <string name="recovery_answer_field_hint_saved">変更する場合は新しい答えを入力（任意）</string>
+    <string name="recovery_answer_field_hint_saved">新しい答えを入力（任意）</string>
     <string name="forgot_pin_link">PINをお忘れですか？</string>
     <string name="recovery_dialog_title">復旧用の答えを入力</string>
     <string name="recovery_dialog_positive">確認</string>

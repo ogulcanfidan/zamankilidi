@@ -23,7 +23,7 @@
     <string name="recovery_answer_hint">PIN을 잊어버리면 이 답변으로 잠금을 해제할 수 있습니다. 본인은 쉽게 기억하지만 아이가 모르거나 짐작할 수 없는 것으로 정하세요. 아이의 출생 연도나 이름은 피하세요. 예: 첫 반려동물의 이름, 가장 좋아했던 선생님의 성, 고등학교를 졸업한 도시.</string>
     <string name="recovery_answer_field_hint">복구 답변 입력</string>
     <string name="recovery_answer_label_saved">복구 답변 (저장됨)</string>
-    <string name="recovery_answer_field_hint_saved">변경하려면 새 답변을 입력하세요 (선택)</string>
+    <string name="recovery_answer_field_hint_saved">새 답변 입력 (선택)</string>
     <string name="forgot_pin_link">PIN을 잊으셨나요?</string>
     <string name="recovery_dialog_title">복구 답변을 입력하세요</string>
     <string name="recovery_dialog_positive">확인</string>

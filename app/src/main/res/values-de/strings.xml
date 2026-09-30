@@ -17,13 +17,13 @@
     <string name="pin_title_new">🔑  Eltern-PIN festlegen</string>
     <string name="pin_title_saved">🔑  Eltern-PIN (gespeichert)</string>
     <string name="pin_hint_new">4-stellige PIN</string>
-    <string name="pin_hint_change">Neue PIN eingeben, um sie zu ändern</string>
+    <string name="pin_hint_change">Neue PIN zum Ändern</string>
     <string name="pin_card_body">Mit dieser PIN beendest du die Sperre vor Ablauf der Zeit. Wähle etwas, das dein Kind nicht kennt.</string>
     <string name="recovery_answer_label">Wiederherstellungsantwort (erforderlich)</string>
     <string name="recovery_answer_hint">Falls du deine PIN vergisst, entsperrst du damit. Wähle etwas, das du dir leicht merken kannst, das dein Kind aber weder kennt noch errät – nicht sein Geburtsjahr oder seinen Namen. Zum Beispiel: der Name deines ersten Haustiers, der Nachname deines Lieblingslehrers oder die Stadt, in der du deinen Schulabschluss gemacht hast.</string>
     <string name="recovery_answer_field_hint">Deine Wiederherstellungsantwort</string>
     <string name="recovery_answer_label_saved">Wiederherstellungsantwort (gespeichert)</string>
-    <string name="recovery_answer_field_hint_saved">Neue eingeben, um sie zu ändern (optional)</string>
+    <string name="recovery_answer_field_hint_saved">Neue Antwort (optional)</string>
     <string name="forgot_pin_link">PIN vergessen?</string>
     <string name="recovery_dialog_title">Wiederherstellungsantwort eingeben</string>
     <string name="recovery_dialog_positive">Bestätigen</string>
